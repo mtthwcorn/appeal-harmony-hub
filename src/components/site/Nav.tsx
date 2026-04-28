@@ -14,6 +14,7 @@ export function SiteNav() {
           {[
             { label: "How it works", href: "#process" },
             { label: "What you get", href: "#included" },
+            { label: "Why appeal?", href: "#costs" },
             { label: "Pricing", href: "#pricing" },
             { label: "FAQ", href: "#faq" },
           ].map((l) => (
