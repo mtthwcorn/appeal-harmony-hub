@@ -1,45 +1,48 @@
 const tiers = [
   {
-    title: "Denial Review",
+    title: "Denial Review + Next-Step Plan",
     price: "$49",
     badge: "Best first step",
+    description: "Best if you are not sure what your denial means or what to ask for next.",
     items: [
-      "Denial explanation",
-      "Next-step plan",
-      "Draft appeal language",
+      "Plain-English explanation of your denial",
+      "Identification of the denial type",
+      "Recommended next step: appeal, resubmission, formulary exception, step therapy response, or benefits escalation",
+      "Document checklist",
       "Doctor-office message",
       "Insurer call script",
-      "Document checklist",
     ],
-    cta: "Get My Denial Reviewed",
+    cta: "Start Denial Review",
     featured: false,
   },
   {
-    title: "Full Appeal Packet",
+    title: "Custom Appeal Packet",
     price: "$149",
     badge: null,
+    description: "Best if you want a more complete appeal packet prepared from your denial information.",
     items: [
       "Everything in Denial Review",
-      "More complete appeal letter",
-      "More detailed document checklist",
-      "One revision after you get more information",
-      "Organized packet format",
+      "More complete custom appeal letter draft",
+      "Organized appeal packet format",
+      "Stronger medical necessity framing based on the denial reason",
+      "One round of revision after you review the packet",
     ],
-    cta: "Prepare My Appeal Packet",
+    cta: "Get Appeal Packet",
     featured: true,
   },
   {
-    title: "Concierge Support",
+    title: "Guided Appeal Support",
     price: "$299",
     badge: null,
+    description: "Best if you want help staying organized after the packet is prepared.",
     items: [
-      "Everything in Full Appeal Packet",
-      "Guided support for 1–2 weeks",
-      "Follow-up checklist",
+      "Everything in Custom Appeal Packet",
+      "1–2 weeks of guided follow-up support",
+      "Help organizing submission steps",
       "HR/benefits escalation language",
-      "Submission organization support",
+      "Follow-up questions to ask your insurer or doctor's office",
     ],
-    cta: "Request Concierge Help",
+    cta: "Get Guided Support",
     featured: false,
   },
 ];
@@ -82,6 +85,7 @@ export function Pricing() {
                 </h3>
               </div>
               <div className="font-heavy text-6xl text-white">{t.price}</div>
+              <p className="text-sm leading-relaxed text-zinc-400">{t.description}</p>
               <div className="h-px w-full bg-forge-800" />
               <ul className="flex flex-col gap-3">
                 {t.items.map((it, i) => (

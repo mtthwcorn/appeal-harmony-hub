@@ -18,7 +18,7 @@ export function CTA() {
           href="#pricing"
           className="inline-flex items-center justify-center rounded-full bg-strike px-14 py-6 font-heavy text-xl uppercase tracking-tight text-forge-950 transition-all duration-300 hover:bg-white hover:shadow-[var(--shadow-strike)]"
         >
-          Get My Denial Reviewed — $49
+          Start My Denial Review — $49
         </a>
       </div>
     </section>

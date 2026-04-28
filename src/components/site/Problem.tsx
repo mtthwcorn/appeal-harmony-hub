@@ -34,7 +34,7 @@ export function Problem() {
           {cards.map((c, i) => (
             <div key={i} className="flex flex-col gap-4 bg-forge-950 p-8 transition-colors hover:bg-forge-900">
               <span className="font-mono text-[10px] uppercase tracking-widest text-strike">
-                Type 0{i + 1}
+                Type {(i + 1).toString().padStart(2, "0")}
               </span>
               <h3 className="font-heavy text-xl uppercase leading-tight tracking-tight text-white">
                 {c.title}

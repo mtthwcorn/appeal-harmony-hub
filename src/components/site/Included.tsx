@@ -1,32 +1,23 @@
 const steps = [
   {
-    title: "Upload or describe your denial",
-    copy: "Tell us what medication was denied, what your insurer said, and whether you have a denial letter. If you have the letter, upload it after checkout so we can review the exact reason for the denial.",
-    items: [
-      "Medication and insurer review",
-      "Denial letter review",
-      "Basic issue summary",
-    ],
+    title: "Denial Summary",
+    copy: "A plain-English explanation of what the insurer appears to be saying.",
   },
   {
-    title: "We identify what kind of appeal you need",
-    copy: "Not every GLP-1 denial is the same. We look for whether the issue appears to be a prior authorization denial, missing documentation, step therapy requirement, formulary exception, medical necessity issue, or plan exclusion.",
-    items: [
-      "Denial type explanation",
-      "Appeal vs. resubmission guidance",
-      "Missing document checklist",
-    ],
+    title: "Recommended Next Step",
+    copy: "Whether this looks like an appeal, prior authorization resubmission, formulary exception, step therapy response, or benefits escalation.",
   },
   {
-    title: "You receive your appeal packet",
-    copy: "We prepare a clear packet you can use with your doctor's office, insurer, pharmacy, or benefits department. You get organized language and next steps instead of guessing what to say.",
-    items: [
-      "Draft appeal letter",
-      "Doctor-office message",
-      "Insurer call script",
-      "Document checklist",
-      "Optional HR/benefits language when relevant",
-    ],
+    title: "Doctor-Office Message",
+    copy: "A copy-paste message asking your prescriber's office for the documentation that may be needed.",
+  },
+  {
+    title: "Insurer Call Script",
+    copy: "Simple questions to ask your insurance company so you can confirm the appeal process, fax/upload instructions, deadlines, and criteria.",
+  },
+  {
+    title: "Document Checklist",
+    copy: "A checklist of records that may support the case, such as chart notes, BMI history, diagnosis codes, prior medications, comorbidities, labs, or prior weight-loss attempts.",
   },
 ];
 
@@ -37,37 +28,29 @@ export function Included() {
         <div className="mb-16 flex max-w-[60ch] flex-col gap-6">
           <div className="inline-flex w-fit items-center gap-3 border border-forge-800 bg-forge-950 px-4 py-2 font-mono text-xs uppercase tracking-widest text-zinc-400">
             <span className="block size-2 bg-strike" />
-            What's included
+            What your packet includes
           </div>
           <h2 className="font-heavy text-4xl uppercase leading-[0.95] tracking-tight text-white lg:text-6xl">
-            A clear appeal packet, <span className="text-strike">built around your denial.</span>
+            What your <span className="text-strike">packet includes.</span>
           </h2>
           <p className="text-pretty text-base text-zinc-400 lg:text-lg">
-            Insurance denials are confusing. We turn your denial letter into a simple next-step plan with the documents, scripts, and messages you need to move the appeal forward.
+            Five clear pieces, organized around your specific denial. No legal jargon. Nothing combative. Just the documents and language you need to move forward.
           </p>
         </div>
 
-        <ol className="grid grid-cols-1 gap-px bg-forge-800 md:grid-cols-3">
+        <ol className="grid grid-cols-1 gap-px bg-forge-800 md:grid-cols-2 lg:grid-cols-5">
           {steps.map((step, i) => (
             <li key={i} className="flex flex-col gap-6 bg-forge-950 p-8 lg:p-10">
               <div className="flex items-baseline gap-3">
                 <span className="font-mono text-xs font-bold leading-none text-strike">
-                  STEP {(i + 1).toString().padStart(2, "0")}
+                  {(i + 1).toString().padStart(2, "0")}
                 </span>
                 <span className="h-px flex-1 bg-forge-800" />
               </div>
-              <h3 className="font-heavy text-2xl uppercase leading-tight tracking-tight text-white lg:text-3xl">
+              <h3 className="font-heavy text-xl uppercase leading-tight tracking-tight text-white lg:text-2xl">
                 {step.title}
               </h3>
               <p className="text-sm leading-relaxed text-zinc-400">{step.copy}</p>
-              <ul className="mt-auto flex flex-col gap-2 border-t border-forge-800 pt-6">
-                {step.items.map((item, j) => (
-                  <li key={j} className="flex items-start gap-3 font-mono text-xs leading-snug text-zinc-200">
-                    <span className="mt-1 block size-1.5 shrink-0 bg-strike" />
-                    {item}
-                  </li>
-                ))}
-              </ul>
             </li>
           ))}
         </ol>
@@ -81,7 +64,7 @@ export function Included() {
             href="#pricing"
             className="inline-flex items-center justify-center rounded-full bg-strike px-10 py-5 font-heavy text-base uppercase tracking-tight text-forge-950 transition-all duration-300 hover:bg-white hover:shadow-[var(--shadow-strike)] lg:text-lg"
           >
-            Get My Denial Reviewed — $49
+            Start My Denial Review — $49
           </a>
         </div>
       </div>

@@ -26,7 +26,7 @@ export function SiteNav() {
           href="#pricing"
           className="inline-flex h-11 items-center justify-center rounded-full bg-white px-6 font-heavy text-sm uppercase tracking-tight text-forge-950 transition-colors hover:bg-strike"
         >
-          Get Denial Reviewed
+          Start Denial Review
         </a>
       </nav>
     </header>
