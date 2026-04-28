@@ -6,22 +6,27 @@ export function SiteNav() {
           <span className="grid size-9 place-items-center bg-strike text-forge-950 font-heavy">
             <span className="text-lg leading-none">O</span>
           </span>
-          <span className="font-heavy text-lg uppercase tracking-tight text-white">
-            Overturn<span className="text-strike">_</span>
+          <span className="font-heavy text-lg lowercase tracking-tight text-white">
+            overturned<span className="text-strike">_</span>
           </span>
         </a>
         <div className="hidden items-center gap-8 lg:flex">
-          {["Process", "Results", "Pricing", "About"].map((l) => (
-            <a key={l} href={`#${l.toLowerCase()}`} className="font-mono text-xs uppercase tracking-widest text-zinc-400 transition-colors hover:text-white">
-              {l}
+          {[
+            { label: "How it works", href: "#process" },
+            { label: "What you get", href: "#included" },
+            { label: "Pricing", href: "#pricing" },
+            { label: "FAQ", href: "#faq" },
+          ].map((l) => (
+            <a key={l.label} href={l.href} className="font-mono text-xs uppercase tracking-widest text-zinc-400 transition-colors hover:text-white">
+              {l.label}
             </a>
           ))}
         </div>
         <a
-          href="#start"
+          href="#pricing"
           className="inline-flex h-11 items-center justify-center rounded-full bg-white px-6 font-heavy text-sm uppercase tracking-tight text-forge-950 transition-colors hover:bg-strike"
         >
-          Start Appeal
+          Get Denial Reviewed
         </a>
       </nav>
     </header>

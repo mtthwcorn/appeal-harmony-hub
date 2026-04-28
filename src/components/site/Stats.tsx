@@ -1,8 +1,8 @@
 const stats = [
-  { value: "84.2%", label: "Overturn rate on final denials" },
-  { value: "$2.4M", label: "Recovered for clients in 2025" },
-  { value: "41", label: "Average days to payout" },
-  { value: "15%", label: "Contingency. Nothing upfront." },
+  { value: "24–48 hrs", label: "Typical delivery time" },
+  { value: "$49", label: "Denial review" },
+  { value: "5+", label: "Common denial types reviewed" },
+  { value: "1 packet", label: "Appeal letter, doctor message, call script, checklist" },
 ];
 
 export function Stats() {

@@ -1,23 +1,23 @@
 const steps = [
   {
     n: "01",
-    title: "Submit Denial",
-    body: "Upload your EOB and denial letter. Our intake protocol extracts every relevant detail in under 4 minutes.",
+    title: "Tell us what was denied",
+    body: "Choose the medication, insurer, and denial type. Upload your denial letter after checkout or start with a short summary.",
   },
   {
     n: "02",
-    title: "Forensic Review",
-    body: "Senior advocates dissect medical coding, policy fine-print, and procedural failures by your carrier.",
+    title: "We review the denial type",
+    body: "We identify whether the issue appears to be prior authorization, step therapy, formulary restriction, missing documentation, plan exclusion, or medical necessity.",
   },
   {
     n: "03",
-    title: "Strategic Appeal",
-    body: "We construct a precision appeal citing case law, medical necessity, and contractual obligation.",
+    title: "You receive your appeal packet",
+    body: "You get a plain-English explanation, draft appeal letter, doctor-office message, insurer call script, and document checklist.",
   },
   {
     n: "04",
-    title: "Recover Funds",
-    body: "Carrier cuts the check. You pay 15% only on what we recover. No win, no fee. Period.",
+    title: "You take the next step",
+    body: "Use the packet to speak with your doctor's office, insurer, pharmacy, or employer benefits department.",
   },
 ];
 
@@ -28,10 +28,10 @@ export function Process() {
         <div className="mb-16 flex flex-col gap-6 lg:mb-20">
           <div className="inline-flex w-fit items-center gap-3 border border-forge-800 bg-forge-900 px-4 py-2 font-mono text-xs uppercase tracking-widest text-zinc-400">
             <span className="block size-2 bg-strike" />
-            The Protocol
+            How it works
           </div>
           <h2 className="max-w-[18ch] font-heavy text-5xl uppercase leading-[0.9] tracking-tight text-white lg:text-7xl">
-            Four steps. <span className="text-strike">Zero noise.</span>
+            How <span className="lowercase">overturned_</span> <span className="text-strike">works.</span>
           </h2>
         </div>
 
