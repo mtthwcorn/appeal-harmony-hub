@@ -1,23 +1,25 @@
 export function CTA() {
   return (
-    <section className="relative overflow-hidden bg-ink-950 py-24 lg:py-28">
-      <div className="pointer-events-none absolute -top-32 left-1/2 h-[420px] w-[820px] -translate-x-1/2 rounded-full bg-brand-500/20 blur-[120px]" />
-      <div className="relative mx-auto flex w-full max-w-[900px] flex-col items-center gap-7 px-6 text-center">
-        <h2 className="font-display text-4xl leading-tight tracking-tight text-white lg:text-6xl">
-          Stop guessing what insurance wants.
+    <section id="start" className="relative overflow-hidden border-t border-forge-800 bg-forge-950 py-32">
+      <div className="pointer-events-none absolute -top-24 left-1/2 h-[400px] w-[800px] -translate-x-1/2 rounded-full bg-strike/15 blur-[120px]" />
+      <div className="relative mx-auto flex w-full max-w-[1100px] flex-col items-center gap-10 px-6 text-center">
+        <div className="inline-flex items-center gap-3 border border-forge-800 bg-forge-900 px-4 py-2 font-mono text-xs uppercase tracking-widest text-zinc-400">
+          <span className="size-2 animate-pulse bg-strike" />
+          Intake Open · Avg Response 14 min
+        </div>
+        <h2 className="font-heavy text-5xl uppercase leading-[0.9] tracking-tight text-white lg:text-8xl">
+          Stop arguing.<br />
+          <span className="text-strike">Start extracting.</span>
         </h2>
-        <p className="max-w-[55ch] text-pretty text-lg text-white/70">
-          Get a clear appeal packet and next-step plan for your GLP-1 denial.
+        <p className="max-w-[55ch] text-pretty text-lg text-zinc-400">
+          Free diagnostic. No credit card. No commitment. We tell you the odds, the timeline, and the strategy — then you decide.
         </p>
         <a
-          href="#intake"
-          className="inline-flex h-13 items-center justify-center rounded-full bg-white px-8 py-4 text-sm font-medium text-ink-950 transition-colors hover:bg-brand-50"
+          href="#"
+          className="inline-flex items-center justify-center rounded-full bg-strike px-14 py-6 font-heavy text-xl uppercase tracking-tight text-forge-950 transition-all duration-300 hover:bg-white hover:shadow-[var(--shadow-strike)]"
         >
-          Get My Denial Reviewed — $49
+          Deploy Advocate Now
         </a>
-        <p className="text-xs text-white/50">
-          No prescribing. No medical or legal advice. No approval guarantees.
-        </p>
       </div>
     </section>
   );

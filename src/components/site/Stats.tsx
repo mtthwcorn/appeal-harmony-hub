@@ -1,23 +1,23 @@
 const stats = [
-  { value: "24–48 hrs", label: "Typical delivery time" },
-  { value: "$49", label: "Denial review" },
-  { value: "5+", label: "Common denial types reviewed" },
-  { value: "1 packet", label: "Appeal letter, doctor message, call script, checklist" },
+  { value: "84.2%", label: "Overturn rate on final denials" },
+  { value: "$2.4M", label: "Recovered for clients in 2025" },
+  { value: "41", label: "Average days to payout" },
+  { value: "15%", label: "Contingency. Nothing upfront." },
 ];
 
 export function Stats() {
   return (
-    <section className="border-y border-mist-200 bg-mist-50">
-      <div className="mx-auto grid max-w-[1200px] grid-cols-2 lg:grid-cols-4">
+    <section className="border-y border-forge-800 bg-forge-900">
+      <div className="mx-auto grid max-w-[1440px] grid-cols-2 lg:grid-cols-4">
         {stats.map((s, i) => (
           <div
             key={i}
-            className="border-r border-mist-200 px-6 py-10 last:border-r-0 lg:px-8 lg:py-12"
+            className="border-r border-forge-800 px-6 py-10 last:border-r-0 lg:px-10 lg:py-14"
           >
-            <div className="font-display text-3xl tracking-tight text-ink-950 lg:text-4xl">
-              {s.value}
+            <div className="font-heavy text-5xl text-white lg:text-6xl">{s.value}</div>
+            <div className="mt-3 font-mono text-xs uppercase tracking-widest text-zinc-500">
+              {s.label}
             </div>
-            <div className="mt-2 text-xs leading-relaxed text-ink-600">{s.label}</div>
           </div>
         ))}
       </div>

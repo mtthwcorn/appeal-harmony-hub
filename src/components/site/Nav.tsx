@@ -1,38 +1,27 @@
-const links = [
-  { label: "How It Works", href: "#how" },
-  { label: "What You Get", href: "#what" },
-  { label: "Pricing", href: "#pricing" },
-  { label: "FAQ", href: "#faq" },
-];
-
 export function SiteNav() {
   return (
-    <header className="sticky top-0 z-30 border-b border-mist-200 bg-white/80 backdrop-blur-md">
-      <nav className="mx-auto flex w-full max-w-[1200px] items-center justify-between px-6 py-4 lg:px-10">
-        <a href="#top" className="flex items-center gap-2">
-          <span className="grid size-8 place-items-center rounded-lg bg-brand-600 text-sm font-semibold text-white">
-            C
+    <header className="absolute top-0 left-0 right-0 z-30">
+      <nav className="mx-auto flex w-full max-w-[1440px] items-center justify-between px-6 py-6 lg:px-12">
+        <a href="/" className="flex items-center gap-3">
+          <span className="grid size-9 place-items-center bg-strike text-forge-950 font-heavy">
+            <span className="text-lg leading-none">O</span>
           </span>
-          <span className="text-base font-semibold tracking-tight text-ink-950">
-            CoveredGLP
+          <span className="font-heavy text-lg uppercase tracking-tight text-white">
+            Overturn<span className="text-strike">_</span>
           </span>
         </a>
-        <div className="hidden items-center gap-8 md:flex">
-          {links.map((l) => (
-            <a
-              key={l.label}
-              href={l.href}
-              className="text-sm text-ink-600 transition-colors hover:text-ink-950"
-            >
-              {l.label}
+        <div className="hidden items-center gap-8 lg:flex">
+          {["Process", "Results", "Pricing", "About"].map((l) => (
+            <a key={l} href={`#${l.toLowerCase()}`} className="font-mono text-xs uppercase tracking-widest text-zinc-400 transition-colors hover:text-white">
+              {l}
             </a>
           ))}
         </div>
         <a
-          href="#intake"
-          className="inline-flex h-10 items-center justify-center rounded-full bg-ink-950 px-5 text-sm font-medium text-white transition-colors hover:bg-brand-700"
+          href="#start"
+          className="inline-flex h-11 items-center justify-center rounded-full bg-white px-6 font-heavy text-sm uppercase tracking-tight text-forge-950 transition-colors hover:bg-strike"
         >
-          Get My Denial Reviewed
+          Start Appeal
         </a>
       </nav>
     </header>
