@@ -4,6 +4,11 @@
 
 @custom-variant dark (&:is(.dark *));
 
+@theme {
+  --font-heavy: "Chivo", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+}
+
 /*
  * Design system definition.
  *
@@ -63,25 +68,39 @@
 
 :root {
   --radius: 0.625rem;
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.129 0.042 264.695);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.129 0.042 264.695);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.129 0.042 264.695);
-  --primary: oklch(0.208 0.042 265.755);
-  --primary-foreground: oklch(0.984 0.003 247.858);
-  --secondary: oklch(0.968 0.007 247.896);
-  --secondary-foreground: oklch(0.208 0.042 265.755);
-  --muted: oklch(0.968 0.007 247.896);
-  --muted-foreground: oklch(0.554 0.046 257.417);
-  --accent: oklch(0.968 0.007 247.896);
-  --accent-foreground: oklch(0.208 0.042 265.755);
-  --destructive: oklch(0.577 0.245 27.325);
-  --destructive-foreground: oklch(0.984 0.003 247.858);
-  --border: oklch(0.929 0.013 255.508);
-  --input: oklch(0.929 0.013 255.508);
-  --ring: oklch(0.704 0.04 256.788);
+  /* Industrial Brute Force palette */
+  --forge-950: oklch(0.05 0 0);
+  --forge-900: oklch(0.16 0 0);
+  --forge-800: oklch(0.22 0 0);
+  --forge-700: oklch(0.32 0 0);
+  --strike: oklch(0.65 0.24 32);
+  --strike-glow: oklch(0.72 0.22 32);
+  --zinc-300: oklch(0.85 0 0);
+  --zinc-400: oklch(0.7 0 0);
+  --zinc-500: oklch(0.55 0 0);
+
+  --background: var(--forge-950);
+  --foreground: oklch(0.98 0 0);
+  --card: var(--forge-900);
+  --card-foreground: oklch(0.98 0 0);
+  --popover: var(--forge-900);
+  --popover-foreground: oklch(0.98 0 0);
+  --primary: var(--strike);
+  --primary-foreground: var(--forge-950);
+  --secondary: var(--forge-900);
+  --secondary-foreground: oklch(0.98 0 0);
+  --muted: var(--forge-900);
+  --muted-foreground: var(--zinc-400);
+  --accent: var(--strike);
+  --accent-foreground: var(--forge-950);
+  --destructive: oklch(0.65 0.24 32);
+  --destructive-foreground: oklch(0.98 0 0);
+  --border: var(--forge-800);
+  --input: var(--forge-800);
+  --ring: var(--strike);
+
+  --shadow-brute: 20px 20px 0 0 var(--forge-900);
+  --shadow-strike: 0 0 40px color-mix(in oklab, var(--strike) 40%, transparent);
   --chart-1: oklch(0.646 0.222 41.116);
   --chart-2: oklch(0.6 0.118 184.704);
   --chart-3: oklch(0.398 0.07 227.392);
