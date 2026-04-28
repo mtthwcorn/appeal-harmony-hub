@@ -1,110 +1,105 @@
-import heroImg from "@/assets/hero-advocate.jpg";
+const bullets = [
+  "For Zepbound, Wegovy, Ozempic, Mounjaro, Saxenda, and other GLP-1 coverage denials",
+  "Built for prior authorization denials, step therapy issues, formulary exceptions, and plan exclusions",
+  "Delivered in 24–48 hours",
+];
+
+const reviewFields = [
+  { label: "Likely denial type", value: "Prior authorization denied" },
+  { label: "Possible next step", value: "Appeal or resubmission packet" },
+  {
+    label: "Documents to request",
+    value: "Chart notes, BMI/history, prior treatments, medication history",
+  },
+  {
+    label: "Included",
+    value: "Appeal draft, doctor message, call script, checklist",
+  },
+];
 
 export function Hero() {
   return (
-    <section className="relative flex min-h-dvh items-center overflow-hidden bg-forge-950 pt-28 pb-20 text-white">
-      {/* Structural background lines */}
-      <div className="pointer-events-none absolute inset-0 opacity-30">
-        <div className="absolute left-16 top-0 bottom-0 w-px bg-forge-800" />
-        <div className="absolute left-1/2 top-0 bottom-0 w-px bg-forge-800" />
-        <div className="absolute right-16 top-0 bottom-0 w-px bg-forge-800" />
-      </div>
+    <section id="top" className="relative overflow-hidden bg-gradient-to-b from-mist-50 to-white pt-16 pb-24 lg:pt-24 lg:pb-32">
+      <div className="mx-auto grid w-full max-w-[1200px] grid-cols-1 items-center gap-14 px-6 lg:grid-cols-[1.1fr_1fr] lg:gap-16 lg:px-10">
+        <div className="flex flex-col items-start gap-7">
+          <span className="inline-flex items-center gap-2 rounded-full border border-brand-100 bg-brand-50 px-3 py-1.5 text-xs font-medium text-brand-700">
+            <span className="size-1.5 rounded-full bg-brand-600" />
+            GLP-1 insurance denial support
+          </span>
 
-      <div className="relative z-10 mx-auto grid w-full max-w-[1440px] grid-cols-1 items-center gap-16 px-6 lg:grid-cols-[1.2fr_1fr] lg:gap-24 lg:px-12">
-        {/* Left */}
-        <div className="flex flex-col items-start gap-10">
-          <div className="inline-flex items-center gap-3 border border-forge-800 bg-forge-900 px-4 py-2 font-mono text-xs uppercase tracking-widest text-zinc-400">
-            <span className="block size-2 bg-strike" />
-            Claim Extraction Unit
-          </div>
-
-          <h1 className="font-heavy text-balance text-6xl uppercase leading-[0.85] tracking-tight md:text-7xl lg:text-8xl">
-            <span className="block text-white">They Denied It.</span>
-            <span className="block text-strike">We Extract It.</span>
+          <h1 className="text-balance font-display text-5xl leading-[1.05] tracking-tight text-ink-950 md:text-6xl lg:text-[64px]">
+            GLP-1 denied by insurance?{" "}
+            <span className="italic text-brand-600">Get an appeal packet prepared for you.</span>
           </h1>
 
-          <p className="max-w-[48ch] text-pretty text-lg leading-relaxed text-zinc-400 lg:text-xl">
-            Insurance algorithms rely on your exhaustion. We rely on brute-force legal architecture.
-            Hand us the final denial, step out of the ring, and let our advocates force the payout you are legally owed.
+          <p className="max-w-[52ch] text-pretty text-lg leading-relaxed text-ink-600">
+            Upload your denial letter and receive a clear next-step plan, draft appeal letter,
+            doctor-office message, insurer call script, and document checklist.
           </p>
 
-          <ul className="flex w-full max-w-[48ch] flex-col gap-4">
-            {[
-              "No upfront retainers. Strictly 15% of recovered funds.",
-              "84.2% overturn rate on 'final administrative denials'.",
-              "Average time from deployment to wire: 41 days.",
-            ].map((line, i) => (
-              <li
-                key={i}
-                className="flex items-start gap-4 border-l-2 border-strike bg-forge-900 p-4 transition-colors"
-              >
-                <span className="mt-0.5 font-mono text-lg font-bold leading-none text-strike">
-                  [✓]
+          <div className="flex flex-wrap items-center gap-3">
+            <a
+              href="#intake"
+              className="inline-flex h-12 items-center justify-center rounded-full bg-ink-950 px-6 text-sm font-medium text-white shadow-[var(--shadow-soft)] transition-colors hover:bg-brand-700"
+            >
+              Get My Denial Reviewed — $49
+            </a>
+            <a
+              href="#what"
+              className="inline-flex h-12 items-center justify-center rounded-full border border-mist-200 bg-white px-6 text-sm font-medium text-ink-950 transition-colors hover:border-ink-400"
+            >
+              See What's Included
+            </a>
+          </div>
+
+          <p className="max-w-[52ch] text-sm leading-relaxed text-ink-400">
+            No prescribing. No medical advice. No legal advice. No approval guarantees. Just clear,
+            organized insurance appeal support.
+          </p>
+
+          <ul className="mt-2 flex w-full flex-col gap-3">
+            {bullets.map((b) => (
+              <li key={b} className="flex items-start gap-3 text-sm text-ink-600">
+                <span className="mt-0.5 grid size-5 shrink-0 place-items-center rounded-full bg-leaf-50 text-leaf-600">
+                  <svg viewBox="0 0 20 20" fill="currentColor" className="size-3">
+                    <path fillRule="evenodd" d="M16.7 5.3a1 1 0 010 1.4l-7.4 7.4a1 1 0 01-1.4 0L3.3 9.5a1 1 0 011.4-1.4l3.9 3.9 6.7-6.7a1 1 0 011.4 0z" clipRule="evenodd" />
+                  </svg>
                 </span>
-                <span className="font-mono text-sm leading-snug text-zinc-300">{line}</span>
+                {b}
               </li>
             ))}
           </ul>
-
-          <div className="flex flex-wrap items-center gap-6 pt-2">
-            <a
-              href="#start"
-              className="inline-flex items-center justify-center rounded-full bg-strike px-12 py-5 font-heavy text-lg uppercase tracking-tight text-forge-950 transition-all duration-300 hover:bg-white hover:shadow-[var(--shadow-strike)]"
-            >
-              Deploy Advocate
-            </a>
-            <div className="flex flex-col">
-              <span className="font-mono text-xs uppercase tracking-widest text-zinc-300">
-                Free Case Diagnostic
-              </span>
-              <span className="font-mono text-xs text-zinc-500">~ 4 min intake</span>
-            </div>
-          </div>
         </div>
 
-        {/* Right */}
-        <div className="relative flex aspect-square w-full items-center justify-center lg:aspect-auto lg:h-[760px]">
-          <div className="absolute inset-4 overflow-hidden bg-forge-900 outline outline-1 outline-offset-8 outline-forge-800 lg:inset-0">
-            <img
-              src={heroImg}
-              alt="Overturn advocate reviewing a denied insurance claim"
-              width={896}
-              height={1152}
-              className="h-full w-full object-cover opacity-80 mix-blend-luminosity contrast-125"
-            />
-            <div className="absolute inset-0 bg-forge-950/30 mix-blend-multiply" />
-            <div className="absolute bottom-0 right-0 h-1/2 w-2/3 bg-strike/20 mix-blend-overlay" />
-          </div>
-
-          {/* Receipt block */}
-          <div className="absolute -left-2 bottom-8 z-20 w-[300px] border border-forge-800 bg-forge-950 p-6 shadow-[var(--shadow-brute)] lg:-left-12 lg:bottom-20 lg:p-8">
+        {/* Sample Denial Review card */}
+        <div className="relative">
+          <div className="absolute -inset-6 -z-10 rounded-3xl bg-gradient-to-br from-brand-50 via-white to-leaf-50 blur-2xl opacity-70" />
+          <div className="rounded-2xl border border-mist-200 bg-white p-7 shadow-[var(--shadow-card)] lg:p-9">
             <div className="mb-6 flex items-center justify-between">
-              <span className="font-mono text-[10px] uppercase tracking-widest text-zinc-500">
-                Status Code: 200
+              <span className="text-xs font-medium uppercase tracking-wider text-ink-400">
+                Sample
               </span>
-              <span className="size-2 animate-pulse bg-strike" />
+              <span className="inline-flex items-center gap-1.5 rounded-full bg-leaf-50 px-2.5 py-1 text-xs font-medium text-leaf-600">
+                <span className="size-1.5 rounded-full bg-leaf-500" />
+                Reviewed
+              </span>
             </div>
-            <h3 className="mb-2 font-heavy text-3xl uppercase leading-[0.9] tracking-tight text-white">
-              Denial<br />Reversed
+            <h3 className="font-display text-3xl tracking-tight text-ink-950">
+              Your Denial Review
             </h3>
-            <div className="mb-5 h-[3px] w-full bg-strike" />
-            <div className="flex flex-col gap-2">
-              <div className="flex justify-between font-mono text-xs text-zinc-400">
-                <span>ORIGINAL CHARGE</span>
-                <span className="line-through">$18,450</span>
-              </div>
-              <div className="flex justify-between font-mono text-sm font-bold text-white">
-                <span>RECOVERED</span>
-                <span>$18,450</span>
-              </div>
+            <div className="mt-6 flex flex-col divide-y divide-mist-200">
+              {reviewFields.map((f) => (
+                <div key={f.label} className="flex flex-col gap-1 py-4 first:pt-0 last:pb-0">
+                  <span className="text-xs font-medium uppercase tracking-wider text-ink-400">
+                    {f.label}
+                  </span>
+                  <span className="text-sm leading-relaxed text-ink-950">{f.value}</span>
+                </div>
+              ))}
             </div>
-          </div>
-
-          {/* Days block */}
-          <div className="absolute -right-2 top-8 z-20 w-[160px] rotate-3 bg-strike p-4 text-forge-950 lg:-right-6 lg:top-20">
-            <div className="mb-1 font-heavy text-4xl leading-none">41</div>
-            <div className="font-mono text-[10px] font-bold uppercase tracking-tight opacity-80">
-              Days to Resolution
+            <div className="mt-6 rounded-xl bg-mist-100 p-4 text-xs leading-relaxed text-ink-600">
+              Educational example. CoveredGLP does not prescribe medication, provide medical or
+              legal advice, or guarantee insurance approval.
             </div>
           </div>
         </div>
