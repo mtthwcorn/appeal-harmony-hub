@@ -1,57 +1,57 @@
-const cases = [
+const scenarios = [
   {
-    tag: "GLP-1 / Wegovy",
-    title: "Carrier denied as 'cosmetic'. Reversed in 38 days.",
-    amount: "$14,820",
-    note: "Cited medical necessity + endocrine documentation",
+    tag: "Prior authorization",
+    title: "Zepbound prior authorization denied",
+    next: "Ask what criteria were missing and prepare an appeal or resubmission packet.",
   },
   {
-    tag: "Mental Health",
-    title: "Inpatient stay denied as 'not medically necessary'.",
-    amount: "$42,300",
-    note: "Forced parity compliance under MHPAEA",
+    tag: "Step therapy",
+    title: "Wegovy step therapy required",
+    next: "Document prior treatments, medication history, contraindications, and clinician rationale.",
   },
   {
-    tag: "Out-of-Network",
-    title: "Emergency surgery balance billed to patient.",
-    amount: "$87,140",
-    note: "Invoked No Surprises Act enforcement",
+    tag: "Plan exclusion",
+    title: "Plan excludes weight-loss medications",
+    next: "Confirm whether the exclusion is plan-level and prepare employer benefits escalation language.",
+  },
+  {
+    tag: "Diagnosis criteria",
+    title: "Ozempic denied for non-covered diagnosis",
+    next: "Clarify the diagnosis and coverage criteria with the prescriber and insurer.",
   },
 ];
 
 export function Cases() {
   return (
-    <section id="results" className="border-t border-forge-800 bg-forge-900 py-24 lg:py-32">
-      <div className="mx-auto w-full max-w-[1440px] px-6 lg:px-12">
-        <div className="mb-16 flex flex-col items-start justify-between gap-6 lg:flex-row lg:items-end">
-          <h2 className="max-w-[20ch] font-heavy text-5xl uppercase leading-[0.9] tracking-tight text-white lg:text-7xl">
-            Recent <span className="text-strike">extractions.</span>
+    <section className="bg-mist-50 py-24 lg:py-32">
+      <div className="mx-auto w-full max-w-[1200px] px-6 lg:px-10">
+        <div className="mb-12 flex max-w-[60ch] flex-col gap-4">
+          <span className="text-xs font-medium uppercase tracking-wider text-brand-600">
+            Examples
+          </span>
+          <h2 className="font-display text-4xl tracking-tight text-ink-950 lg:text-5xl">
+            Common GLP-1 denial scenarios
           </h2>
-          <p className="max-w-[40ch] font-mono text-sm text-zinc-400">
-            Anonymized case files from the last 90 days. Names redacted, outcomes verified.
+          <p className="text-base leading-relaxed text-ink-600">
+            Educational examples of denial types. Every plan and situation is different.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {cases.map((c, i) => (
+        <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
+          {scenarios.map((s) => (
             <article
-              key={i}
-              className="flex flex-col gap-6 border border-forge-800 bg-forge-950 p-8 transition-all hover:border-strike hover:shadow-[var(--shadow-brute)]"
+              key={s.title}
+              className="flex flex-col gap-4 rounded-2xl border border-mist-200 bg-white p-7"
             >
-              <div className="flex items-center justify-between">
-                <span className="font-mono text-[10px] uppercase tracking-widest text-strike">
-                  {c.tag}
+              <span className="inline-flex w-fit items-center rounded-full bg-brand-50 px-2.5 py-1 text-xs font-medium text-brand-700">
+                {s.tag}
+              </span>
+              <h3 className="text-lg font-semibold leading-snug text-ink-950">{s.title}</h3>
+              <div className="rounded-xl bg-mist-100 p-4">
+                <span className="block text-xs font-medium uppercase tracking-wider text-ink-400">
+                  Possible next step
                 </span>
-                <span className="font-mono text-[10px] uppercase tracking-widest text-zinc-500">
-                  Case #{(8400 + i).toString()}
-                </span>
-              </div>
-              <h3 className="font-heavy text-xl uppercase leading-tight tracking-tight text-white">
-                {c.title}
-              </h3>
-              <div className="mt-auto flex items-end justify-between border-t border-forge-800 pt-6">
-                <span className="font-mono text-xs text-zinc-500">{c.note}</span>
-                <span className="font-heavy text-2xl text-strike">{c.amount}</span>
+                <p className="mt-1.5 text-sm leading-relaxed text-ink-950">{s.next}</p>
               </div>
             </article>
           ))}
