@@ -8,6 +8,7 @@ import { Process } from "@/components/site/Process";
 import { Included } from "@/components/site/Included";
 import { Comparison } from "@/components/site/Comparison";
 import { Cases } from "@/components/site/Cases";
+import { Costs } from "@/components/site/Costs";
 import { Trust } from "@/components/site/Trust";
 import { Pricing } from "@/components/site/Pricing";
 import { Intake } from "@/components/site/Intake";
@@ -32,6 +33,7 @@ function Index() {
         <Included />
         <Comparison />
         <Cases />
+        <Costs />
         <Trust />
         <Pricing />
         <Intake />
