@@ -5,8 +5,8 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme {
-  --font-heavy: "Chivo", system-ui, sans-serif;
-  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+  --font-display: "Instrument Serif", "Times New Roman", serif;
+  --font-sans: "Inter", system-ui, sans-serif;
 }
 
 /*
@@ -31,12 +31,21 @@
   --radius-2xl: calc(var(--radius) + 8px);
   --radius-3xl: calc(var(--radius) + 12px);
   --radius-4xl: calc(var(--radius) + 16px);
-  --color-forge-950: var(--forge-950);
-  --color-forge-900: var(--forge-900);
-  --color-forge-800: var(--forge-800);
-  --color-forge-700: var(--forge-700);
-  --color-strike: var(--strike);
-  --color-strike-glow: var(--strike-glow);
+  --color-ink-950: var(--ink-950);
+  --color-ink-800: var(--ink-800);
+  --color-ink-600: var(--ink-600);
+  --color-ink-400: var(--ink-400);
+  --color-mist-50: var(--mist-50);
+  --color-mist-100: var(--mist-100);
+  --color-mist-200: var(--mist-200);
+  --color-brand-50: var(--brand-50);
+  --color-brand-100: var(--brand-100);
+  --color-brand-500: var(--brand-500);
+  --color-brand-600: var(--brand-600);
+  --color-brand-700: var(--brand-700);
+  --color-leaf-50: var(--leaf-50);
+  --color-leaf-500: var(--leaf-500);
+  --color-leaf-600: var(--leaf-600);
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
@@ -74,39 +83,48 @@
 
 :root {
   --radius: 0.625rem;
-  /* Industrial Brute Force palette */
-  --forge-950: oklch(0.05 0 0);
-  --forge-900: oklch(0.16 0 0);
-  --forge-800: oklch(0.22 0 0);
-  --forge-700: oklch(0.32 0 0);
-  --strike: oklch(0.65 0.24 32);
-  --strike-glow: oklch(0.72 0.22 32);
-  --zinc-300: oklch(0.85 0 0);
-  --zinc-400: oklch(0.7 0 0);
-  --zinc-500: oklch(0.55 0 0);
+  /* CoveredGLP — calm healthcare SaaS palette */
+  --ink-950: oklch(0.22 0.04 255);  /* deep navy */
+  --ink-800: oklch(0.32 0.04 255);
+  --ink-600: oklch(0.50 0.03 255);
+  --ink-400: oklch(0.65 0.02 255);
 
-  --background: var(--forge-950);
-  --foreground: oklch(0.98 0 0);
-  --card: var(--forge-900);
-  --card-foreground: oklch(0.98 0 0);
-  --popover: var(--forge-900);
-  --popover-foreground: oklch(0.98 0 0);
-  --primary: var(--strike);
-  --primary-foreground: var(--forge-950);
-  --secondary: var(--forge-900);
-  --secondary-foreground: oklch(0.98 0 0);
-  --muted: var(--forge-900);
-  --muted-foreground: var(--zinc-400);
-  --accent: var(--strike);
-  --accent-foreground: var(--forge-950);
-  --destructive: oklch(0.65 0.24 32);
-  --destructive-foreground: oklch(0.98 0 0);
-  --border: var(--forge-800);
-  --input: var(--forge-800);
-  --ring: var(--strike);
+  --mist-50: oklch(0.99 0.005 240);
+  --mist-100: oklch(0.975 0.008 240);
+  --mist-200: oklch(0.94 0.012 240);
 
-  --shadow-brute: 20px 20px 0 0 var(--forge-900);
-  --shadow-strike: 0 0 40px color-mix(in oklab, var(--strike) 40%, transparent);
+  --brand-50: oklch(0.97 0.02 240);
+  --brand-100: oklch(0.93 0.04 240);
+  --brand-500: oklch(0.62 0.16 250);
+  --brand-600: oklch(0.55 0.17 252);
+  --brand-700: oklch(0.46 0.16 254);
+
+  --leaf-50: oklch(0.96 0.04 160);
+  --leaf-500: oklch(0.68 0.13 160);
+  --leaf-600: oklch(0.58 0.13 162);
+
+  --background: oklch(1 0 0);
+  --foreground: var(--ink-950);
+  --card: oklch(1 0 0);
+  --card-foreground: var(--ink-950);
+  --popover: oklch(1 0 0);
+  --popover-foreground: var(--ink-950);
+  --primary: var(--brand-600);
+  --primary-foreground: oklch(1 0 0);
+  --secondary: var(--mist-100);
+  --secondary-foreground: var(--ink-950);
+  --muted: var(--mist-100);
+  --muted-foreground: var(--ink-600);
+  --accent: var(--brand-50);
+  --accent-foreground: var(--ink-950);
+  --destructive: oklch(0.62 0.20 28);
+  --destructive-foreground: oklch(1 0 0);
+  --border: var(--mist-200);
+  --input: var(--mist-200);
+  --ring: var(--brand-500);
+
+  --shadow-soft: 0 1px 2px oklch(0.22 0.04 255 / 0.04), 0 8px 24px oklch(0.22 0.04 255 / 0.06);
+  --shadow-card: 0 1px 2px oklch(0.22 0.04 255 / 0.05), 0 12px 32px oklch(0.22 0.04 255 / 0.08);
   --chart-1: oklch(0.646 0.222 41.116);
   --chart-2: oklch(0.6 0.118 184.704);
   --chart-3: oklch(0.398 0.07 227.392);
