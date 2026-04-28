@@ -1,9 +1,34 @@
 const meds = [
-  { name: "Wegovy", retail: "$1,350", withCoverage: "$0–$25" },
-  { name: "Zepbound", retail: "$1,060", withCoverage: "$25" },
-  { name: "Ozempic", retail: "$970", withCoverage: "$25" },
-  { name: "Mounjaro", retail: "$1,080", withCoverage: "$25" },
-  { name: "Saxenda", retail: "$1,350", withCoverage: "$25" },
+  {
+    name: "Wegovy",
+    retail: "~$1,350 / mo",
+    selfPay: "$199–$499 / mo",
+    withCoverage: "As low as $0–$25 / mo",
+  },
+  {
+    name: "Zepbound",
+    retail: "~$1,060 / mo",
+    selfPay: "$299–$499 / mo",
+    withCoverage: "As low as $25 / mo",
+  },
+  {
+    name: "Ozempic",
+    retail: "~$970 / mo",
+    selfPay: "$199–$349 / mo",
+    withCoverage: "As low as $25 / mo",
+  },
+  {
+    name: "Mounjaro",
+    retail: "~$1,080 / mo",
+    selfPay: "$349–$499 / mo",
+    withCoverage: "As low as $25 / mo",
+  },
+  {
+    name: "Saxenda",
+    retail: "~$1,350 / mo",
+    selfPay: "$700–$1,350 / mo",
+    withCoverage: "As low as $25 / mo",
+  },
 ];
 
 export function Costs() {
@@ -20,23 +45,30 @@ export function Costs() {
         </div>
 
         <div className="overflow-hidden border border-forge-800">
-          <div className="grid grid-cols-[1.2fr_1fr_1fr] bg-forge-950 font-mono text-[10px] uppercase tracking-widest text-zinc-500">
+          <div className="hidden grid-cols-[1.2fr_1fr_1fr_1fr] bg-forge-950 font-mono text-[10px] uppercase tracking-widest text-zinc-500 md:grid">
             <div className="border-b border-r border-forge-800 px-6 py-4">Medication</div>
-            <div className="border-b border-r border-forge-800 px-6 py-4">Avg. retail / month</div>
+            <div className="border-b border-r border-forge-800 px-6 py-4">List / retail*</div>
+            <div className="border-b border-r border-forge-800 px-6 py-4">Self-pay (mfr. program)*</div>
             <div className="border-b border-forge-800 px-6 py-4">With coverage*</div>
           </div>
           {meds.map((m, i) => (
             <div
               key={m.name}
-              className={`grid grid-cols-[1.2fr_1fr_1fr] ${i % 2 === 0 ? "bg-forge-950" : "bg-forge-900"}`}
+              className={`grid grid-cols-1 md:grid-cols-[1.2fr_1fr_1fr_1fr] ${i % 2 === 0 ? "bg-forge-950" : "bg-forge-900"}`}
             >
-              <div className="border-r border-forge-800 px-6 py-5 font-heavy text-lg uppercase tracking-tight text-white">
+              <div className="border-b border-forge-800 px-6 py-5 font-heavy text-lg uppercase tracking-tight text-white md:border-b-0 md:border-r">
                 {m.name}
               </div>
-              <div className="border-r border-forge-800 px-6 py-5 font-mono text-sm text-zinc-300">
+              <div className="border-b border-forge-800 px-6 py-5 font-mono text-sm text-zinc-300 md:border-b-0 md:border-r">
+                <span className="mb-1 block font-mono text-[10px] uppercase tracking-widest text-zinc-500 md:hidden">List / retail</span>
                 {m.retail}
               </div>
+              <div className="border-b border-forge-800 px-6 py-5 font-mono text-sm text-zinc-300 md:border-b-0 md:border-r">
+                <span className="mb-1 block font-mono text-[10px] uppercase tracking-widest text-zinc-500 md:hidden">Self-pay</span>
+                {m.selfPay}
+              </div>
               <div className="px-6 py-5 font-mono text-sm text-strike">
+                <span className="mb-1 block font-mono text-[10px] uppercase tracking-widest text-zinc-500 md:hidden">With coverage</span>
                 {m.withCoverage}
               </div>
             </div>
@@ -44,7 +76,7 @@ export function Costs() {
         </div>
 
         <p className="mt-6 max-w-[80ch] font-mono text-[11px] leading-relaxed text-zinc-500">
-          *Examples only. Prices vary by pharmacy, dose, region, plan design, and manufacturer savings program eligibility. Retail prices reflect commonly reported list prices in 2024–2025. Covered prices reflect typical commercially-insured copays when manufacturer savings cards are applied. Your actual cost may differ. overturned_ does not set prices and does not guarantee approval or any specific out-of-pocket cost.
+          *Examples only, updated for 2026. List prices: Wegovy ~$1,349/mo, Zepbound ~$1,060/mo, Ozempic ~$970/mo, Mounjaro ~$1,080/mo, Saxenda ~$1,350/mo. Self-pay reflects current manufacturer direct-purchase programs (e.g. LillyDirect Zepbound $299–$499/mo, NovoCare Wegovy $199–$499/mo, Ozempic self-pay $199–$349/mo). With-coverage figures reflect typical commercially-insured copays when manufacturer savings cards are applied — frequently $0–$25/mo for eligible patients. Your actual cost varies by pharmacy, dose, region, plan design, and eligibility. overturned_ does not set prices and does not guarantee approval or any specific out-of-pocket cost.
         </p>
 
         <div className="mt-10 flex justify-center">
