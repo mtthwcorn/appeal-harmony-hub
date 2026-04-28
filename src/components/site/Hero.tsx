@@ -19,25 +19,23 @@ export function Hero() {
           </div>
 
           <h1 className="font-heavy text-balance text-6xl uppercase leading-[0.85] tracking-tight md:text-7xl lg:text-8xl">
-            <span className="block text-white">GLP-1 denied by insurance?</span>
-            <span className="block text-strike">Get an appeal packet prepared for you.</span>
+            <span className="block text-white">Denied for Wegovy, Zepbound, Ozempic, or Mounjaro?</span>
+            <span className="block text-strike">We help you appeal.</span>
           </h1>
 
           <p className="max-w-[48ch] text-pretty text-lg leading-relaxed text-zinc-400 lg:text-xl">
-            Upload your denial letter and receive a clear next-step plan, draft appeal letter,
-            doctor-office message, insurer call script, and document checklist.
+            We help you understand why insurance said no and prepare the appeal documents you need to move forward.
           </p>
 
           <p className="max-w-[52ch] font-mono text-xs leading-relaxed text-zinc-500">
-            No prescribing. No medical advice. No legal advice. No approval guarantees.
-            Just clear, organized insurance appeal support.
+            Upload your denial letter and get a clear explanation, next-step plan, doctor-office message, insurer call script, and document checklist. We do not prescribe medication, replace your doctor, or guarantee approval.
           </p>
 
           <ul className="flex w-full max-w-[48ch] flex-col gap-4">
             {[
-              "For Zepbound, Wegovy, Ozempic, Mounjaro, Saxenda, and other GLP-1 coverage denials.",
-              "Built for prior authorization denials, step therapy issues, formulary exceptions, and plan exclusions.",
-              "Delivered in 24–48 hours.",
+              "Built for GLP-1 prior authorization denials, step therapy requirements, formulary exceptions, and plan exclusions.",
+              "For Zepbound, Wegovy, Ozempic, Mounjaro, Saxenda, and similar medications.",
+              "Most reviews delivered in 24–48 hours.",
             ].map((line, i) => (
               <li
                 key={i}
@@ -56,13 +54,13 @@ export function Hero() {
               href="#pricing"
               className="inline-flex items-center justify-center rounded-full bg-strike px-12 py-5 font-heavy text-lg uppercase tracking-tight text-forge-950 transition-all duration-300 hover:bg-white hover:shadow-[var(--shadow-strike)]"
             >
-              Get My Denial Reviewed — $49
+              Start My Denial Review
             </a>
             <a
               href="#included"
               className="font-mono text-xs uppercase tracking-widest text-zinc-300 underline-offset-4 hover:text-white hover:underline"
             >
-              See what's included →
+              See What's Included →
             </a>
           </div>
         </div>
