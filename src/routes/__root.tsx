@@ -32,10 +32,14 @@ export const Route = createRootRoute({
       { title: "Overturn — Insurance Appeals That Win" },
       { name: "description", content: "They denied it. We extract it. Brute-force legal architecture for overturning denied health insurance claims. 84% overturn rate." },
       { property: "og:title", content: "Overturn — Insurance Appeals That Win" },
-      { property: "og:description", content: "They denied it. We extract it. Brute-force legal architecture for overturning denied health insurance claims." },
+      { property: "og:description", content: "They denied it. We extract it. Brute-force legal architecture for overturning denied health insurance claims. 84% overturn rate." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:title", content: "Overturn — Insurance Appeals That Win" },
+      { name: "twitter:description", content: "They denied it. We extract it. Brute-force legal architecture for overturning denied health insurance claims. 84% overturn rate." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/8c971532-180c-4629-b329-c7e17ef5ac99/id-preview-964d9938--2254c9dd-64d3-4e3f-b8c4-02da0d8def69.lovable.app-1777338906549.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/8c971532-180c-4629-b329-c7e17ef5ac99/id-preview-964d9938--2254c9dd-64d3-4e3f-b8c4-02da0d8def69.lovable.app-1777338906549.png" },
     ],
     links: [
       {
