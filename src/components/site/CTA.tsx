@@ -8,17 +8,17 @@ export function CTA() {
           Intake Open · Delivered 24–48 hrs
         </div>
         <h2 className="font-heavy text-5xl uppercase leading-[0.9] tracking-tight text-white lg:text-8xl">
-          Stop guessing<br />
-          <span className="text-strike">what insurance wants.</span>
+          Turn your denial letter<br />
+          <span className="text-strike">into a clearer next-step plan.</span>
         </h2>
         <p className="max-w-[55ch] text-pretty text-lg text-zinc-400">
-          Get a clear appeal packet and next-step plan for your GLP-1 denial.
+          Get a clearer appeal packet and next-step plan for your insurance denial.
         </p>
         <a
           href="#pricing"
           className="inline-flex items-center justify-center rounded-full bg-strike px-14 py-6 font-heavy text-xl uppercase tracking-tight text-forge-950 transition-all duration-300 hover:bg-white hover:shadow-[var(--shadow-strike)]"
         >
-          Start My Denial Review — $49
+          Start My Appeal Review — $49
         </a>
       </div>
     </section>
