@@ -16,6 +16,7 @@ function doPost(e) {
       payload.medication || '',
       payload.insuranceCompany || '',
       payload.denialType || '',
+      payload.selectedPackage || payload.tier || '',
       payload.hasDenialLetter || '',
       payload.description || '',
       payload.emailStatus || '',

@@ -72,7 +72,6 @@ export function IntakeSubmissionEmail({
               <Field label="What was denied" value={submission.medication} />
               <Field label="Insurance company" value={submission.insuranceCompany} />
               <Field label="What happened" value={submission.denialType} />
-              <Field label="Selected tier" value={submission.tier} />
               <Field
                 label="Denial letter available"
                 value={submission.hasDenialLetter === "yes" ? "Yes" : "No"}
@@ -84,6 +83,7 @@ export function IntakeSubmissionEmail({
                 }
                 multiline
               />
+              <Field label="Selected package" value={submission.tier} />
             </Section>
 
             {isCustomer ? (

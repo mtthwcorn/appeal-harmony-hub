@@ -19,6 +19,8 @@ export async function appendIntakeToGoogleSheet(submission: IntakeSubmission) {
       medication: submission.medication,
       insuranceCompany: submission.insuranceCompany,
       denialType: submission.denialType,
+      selectedPackage: submission.tier,
+      tier: submission.tier,
       hasDenialLetter: submission.hasDenialLetter === "yes" ? "Yes" : "No",
       description: submission.description || "",
       emailStatus: "Email sent",
@@ -29,6 +31,16 @@ export async function appendIntakeToGoogleSheet(submission: IntakeSubmission) {
   if (!response.ok) {
     throw new Error(
       `Google Apps Script append failed with status ${response.status}.`,
+    );
+  }
+
+  const result = (await response.json().catch(() => null)) as
+    | { ok?: boolean; error?: string }
+    | null;
+
+  if (result && result.ok === false) {
+    throw new Error(
+      result.error || "Google Apps Script reported an error while appending.",
     );
   }
 

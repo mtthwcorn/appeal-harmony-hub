@@ -1,5 +1,12 @@
 Paste this into a Google Apps Script project bound to your Google Sheet, then deploy it as a web app:
 
+Current deployment reference:
+
+```text
+Deployment ID: AKfycbxpKTipmov5C8t5OKesaEI0cjV54645q-kB3YWbSuHVA_bsaEAsKwbRfJtte-ZBESY
+Web app URL: https://script.google.com/macros/s/AKfycbxpKTipmov5C8t5OKesaEI0cjV54645q-kB3YWbSuHVA_bsaEAsKwbRfJtte-ZBESY/exec
+```
+
 ```javascript
 const SHEET_NAME = 'Intake';
 
@@ -19,6 +26,7 @@ function doPost(e) {
       payload.medication || '',
       payload.insuranceCompany || '',
       payload.denialType || '',
+      payload.selectedPackage || payload.tier || '',
       payload.hasDenialLetter || '',
       payload.description || '',
       payload.emailStatus || '',
@@ -44,5 +52,9 @@ function doPost(e) {
 Expected sheet headers:
 
 ```text
-Timestamp | First name | Email | Medication | Insurance company | Denial type | Denial letter available | Short description | Email status | Source
+Timestamp | First name | Email | What was denied | Insurance company | What happened | Selected package | Denial letter available | Short description | Email status | Source
 ```
+
+If your sheet already exists, insert the new `Selected package` column between `What happened` and `Denial letter available`.
+
+After updating the script, redeploy the Apps Script web app so `GOOGLE_APPS_SCRIPT_URL` points to the latest deployed version.
