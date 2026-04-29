@@ -15,26 +15,26 @@ export function Hero() {
         <div className="flex flex-col items-start gap-10">
           <div className="inline-flex items-center gap-3 border border-forge-800 bg-forge-900 px-4 py-2 font-mono text-xs uppercase tracking-widest text-zinc-400">
             <span className="block size-2 bg-strike" />
-            GLP-1 Denial Appeal Support
+            Insurance Denial Appeal Support
           </div>
 
           <h1 className="font-heavy text-balance text-6xl uppercase leading-[0.85] tracking-tight md:text-7xl lg:text-8xl">
-            <span className="block text-white">Denied for Wegovy, Zepbound, Ozempic, or Mounjaro?</span>
-            <span className="block text-strike">We help you appeal.</span>
+            <span className="block text-white">Denied by insurance?</span>
+            <span className="block text-strike">Get a clearer appeal packet.</span>
           </h1>
 
           <p className="max-w-[48ch] text-pretty text-lg leading-relaxed text-zinc-400 lg:text-xl">
-            We help you understand why insurance said no and prepare the appeal documents you need to move forward.
+            Upload your denial letter and overturned_ helps you understand what happened, what documents may be needed, and how to prepare a more complete appeal packet.
           </p>
 
           <p className="max-w-[52ch] font-mono text-xs leading-relaxed text-zinc-500">
-            Upload your denial letter and get a clear explanation, next-step plan, doctor-office message, insurer call script, and document checklist. We do not prescribe medication, replace your doctor, or guarantee approval.
+            No approval guarantee. No medical advice. Built to help you get organized and take the next step — with a denial summary, appeal letter draft, doctor-office message, insurer call script, document checklist, and cost impact summary.
           </p>
 
           <ul className="flex w-full max-w-[48ch] flex-col gap-4">
             {[
-              "Built for GLP-1 prior authorization denials, step therapy requirements, formulary exceptions, and plan exclusions.",
-              "For Zepbound, Wegovy, Ozempic, Mounjaro, Saxenda, and similar medications.",
+              "Built for prior authorization denials, step therapy requirements, formulary exceptions, and plan-level coverage issues.",
+              "Works for any treatment your doctor recommended that your plan denied or required more documentation for.",
               "Most reviews delivered in 24–48 hours.",
             ].map((line, i) => (
               <li
@@ -54,7 +54,7 @@ export function Hero() {
               href="#pricing"
               className="inline-flex items-center justify-center rounded-full bg-strike px-12 py-5 font-heavy text-lg uppercase tracking-tight text-forge-950 transition-all duration-300 hover:bg-white hover:shadow-[var(--shadow-strike)]"
             >
-              Start My Denial Review
+              Start My Appeal Review
             </a>
             <a
               href="#included"
@@ -70,7 +70,7 @@ export function Hero() {
           <div className="absolute inset-4 overflow-hidden bg-forge-900 outline outline-1 outline-offset-8 outline-forge-800 lg:inset-0">
             <img
               src={heroImg}
-              alt="overturned_ specialist reviewing a GLP-1 insurance denial letter"
+              alt="overturned_ specialist reviewing an insurance denial letter"
               width={896}
               height={1152}
               className="h-full w-full object-cover opacity-80 mix-blend-luminosity contrast-125"
@@ -107,7 +107,7 @@ export function Hero() {
           <div className="absolute -right-2 top-8 z-20 w-[160px] rotate-3 bg-strike p-4 text-forge-950 lg:-right-6 lg:top-20">
             <div className="mb-1 font-heavy text-4xl leading-none">$49</div>
             <div className="font-mono text-[10px] font-bold uppercase tracking-tight opacity-80">
-              Denial Review
+              Appeal Review
             </div>
           </div>
         </div>
