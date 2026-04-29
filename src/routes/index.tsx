@@ -3,7 +3,6 @@ import { SiteNav } from "@/components/site/Nav";
 import { Hero } from "@/components/site/Hero";
 import { Stats } from "@/components/site/Stats";
 import { Problem } from "@/components/site/Problem";
-import { DenialTypes } from "@/components/site/DenialTypes";
 import { Process } from "@/components/site/Process";
 import { Included } from "@/components/site/Included";
 import { Comparison } from "@/components/site/Comparison";
@@ -27,7 +26,6 @@ function Index() {
       <main>
         <Hero />
         <Stats />
-        <DenialTypes />
         <Problem />
         <Process />
         <Included />
