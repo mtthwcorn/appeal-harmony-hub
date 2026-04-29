@@ -1,6 +1,6 @@
 const stats = [
   { value: "24–48 hrs", label: "Typical delivery time" },
-  { value: "$49", label: "Denial review" },
+  { value: "$49", label: "Appeal review" },
   { value: "5+", label: "Common denial types reviewed" },
   { value: "1 packet", label: "Appeal letter, doctor message, call script, checklist" },
 ];

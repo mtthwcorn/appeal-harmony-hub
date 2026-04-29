@@ -1,18 +1,18 @@
 const tiers = [
   {
-    title: "Denial Review + Next-Step Plan",
+    title: "Appeal Review + Next-Step Plan",
     price: "$49",
     badge: "Best first step",
     description: "Best if you are not sure what your denial means or what to ask for next.",
     items: [
       "Plain-English explanation of your denial",
       "Identification of the denial type",
-      "Recommended next step: appeal, resubmission, formulary exception, step therapy response, or benefits escalation",
+      "Recommended next step: appeal, resubmission, coverage exception, step therapy response, or benefits escalation",
       "Document checklist",
       "Doctor-office message",
       "Insurer call script",
     ],
-    cta: "Start Denial Review",
+    cta: "Start Appeal Review",
     featured: false,
   },
   {
@@ -21,7 +21,7 @@ const tiers = [
     badge: null,
     description: "Best if you want a more complete appeal packet prepared from your denial information.",
     items: [
-      "Everything in Denial Review",
+      "Everything in Appeal Review",
       "More complete custom appeal letter draft",
       "Organized appeal packet format",
       "Stronger medical necessity framing based on the denial reason",
