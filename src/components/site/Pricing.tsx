@@ -1,46 +1,39 @@
 const tiers = [
   {
-    title: "Appeal Review + Next-Step Plan",
-    price: "$49",
-    badge: "Best first step",
-    description: "Not sure what your denial means or what to do next.",
+    title: "Appeal Letter Packet",
+    price: "$149",
+    badge: "Most popular",
+    description: "A customized appeal letter and core documents to respond to an insurance denial.",
     items: [
       "Plain-English denial explanation",
       "Denial-type identification",
-      "Recommended next step",
+      "Custom appeal letter draft",
       "Document checklist",
       "Doctor-office message",
       "Insurer call script",
-    ],
-    cta: "Start Appeal Review",
-    featured: false,
-  },
-  {
-    title: "Custom Appeal Packet",
-    price: "$149",
-    badge: null,
-    description: "A complete appeal packet built from your denial.",
-    items: [
-      "Everything in Appeal Review",
-      "Complete custom appeal letter draft",
-      "Organized packet format",
-      "Stronger medical necessity framing",
+      "Cost impact summary",
+      "Organized appeal packet format",
       "One round of revisions",
     ],
-    cta: "Get Appeal Packet",
+    cta: "Get Appeal Letter",
     featured: true,
   },
   {
     title: "Guided Appeal Support",
-    price: "$299",
+    price: "$399",
     badge: null,
-    description: "Help staying organized after the packet is ready.",
+    description: "Live help and guidance through the appeal process, including support if the denial continues.",
     items: [
-      "Everything in Custom Appeal Packet",
-      "1–2 weeks of guided follow-up",
-      "Help organizing submission steps",
-      "HR/benefits escalation language",
-      "Follow-up questions for insurer or doctor",
+      "Everything in Appeal Letter Packet",
+      "Live appeal review call",
+      "Guided walkthrough of your packet",
+      "Help deciding what to send and when",
+      "Custom follow-up messages",
+      "Doctor-office follow-up guidance",
+      "Insurer follow-up guidance",
+      "Support if coverage is denied again",
+      "Help preparing the next response",
+      "Two rounds of revisions",
     ],
     cta: "Get Guided Support",
     featured: false,
@@ -61,7 +54,7 @@ export function Pricing() {
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 gap-6 lg:grid-cols-3">
+        <div className="mx-auto grid max-w-4xl grid-cols-1 gap-6 lg:grid-cols-2">
           {tiers.map((t) => (
             <article
               key={t.title}
@@ -110,7 +103,7 @@ export function Pricing() {
         </div>
 
         <p className="mt-10 max-w-[70ch] font-mono text-xs leading-relaxed text-zinc-500">
-          No approval or coverage guaranteed. We help you understand your denial and prepare organized documents.
+          Overturned does not guarantee approval and does not provide medical, legal, or insurance advice. We help you organize your denial, prepare appeal-related documents, and understand possible next steps.
         </p>
       </div>
     </section>
