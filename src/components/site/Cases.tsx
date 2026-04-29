@@ -1,27 +1,27 @@
 const cases = [
   {
-    tag: "Zepbound",
-    title: "Zepbound prior authorization denied.",
+    tag: "Prior Authorization",
+    title: "Prior authorization denied by your insurer.",
     amount: "Possible next step",
-    note: "Ask what criteria were missing and prepare an appeal or resubmission packet.",
+    note: "Ask what criteria were missing and prepare an appeal or resubmission packet with your doctor's office.",
   },
   {
-    tag: "Wegovy",
-    title: "Wegovy step therapy required.",
+    tag: "Step Therapy",
+    title: "Step therapy required before approval.",
     amount: "Possible next step",
-    note: "Document prior treatments, medication history, contraindications, and clinician rationale.",
+    note: "Document prior treatments, history of care, contraindications, and your doctor's clinical rationale.",
   },
   {
     tag: "Plan Exclusion",
-    title: "Plan excludes weight-loss medications.",
+    title: "Your plan excludes this category of care.",
     amount: "Possible next step",
     note: "Confirm whether the exclusion is plan-level and prepare employer benefits escalation language.",
   },
   {
-    tag: "Ozempic",
-    title: "Ozempic denied for non-covered diagnosis.",
+    tag: "Coverage Criteria",
+    title: "Denied because diagnosis is not covered.",
     amount: "Possible next step",
-    note: "Clarify the diagnosis and coverage criteria with the prescriber and insurer.",
+    note: "Clarify the diagnosis and coverage criteria with your doctor's office and insurer.",
   },
 ];
 
@@ -31,7 +31,7 @@ export function Cases() {
       <div className="mx-auto w-full max-w-[1440px] px-6 lg:px-12">
         <div className="mb-16 flex flex-col items-start justify-between gap-6 lg:flex-row lg:items-end">
           <h2 className="max-w-[20ch] font-heavy text-5xl uppercase leading-[0.9] tracking-tight text-white lg:text-7xl">
-            Common GLP-1 <span className="text-strike">denial scenarios.</span>
+            Common <span className="text-strike">denial scenarios.</span>
           </h2>
           <p className="max-w-[40ch] font-mono text-sm text-zinc-400">
             Educational examples only. Every denial is different — we help you understand which type yours is and what to do next.
