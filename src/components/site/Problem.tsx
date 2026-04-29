@@ -1,19 +1,19 @@
 const cards = [
   {
     title: "Prior authorization denied",
-    body: "Your insurer may need more documentation from your doctor before reviewing coverage again.",
+    body: "Your insurer needs more documentation before reviewing again.",
   },
   {
     title: "Step therapy required",
-    body: "Your plan may require proof that other treatments were tried first or were not appropriate.",
+    body: "Your plan wants proof other treatments were tried first.",
   },
   {
     title: "Treatment not covered",
-    body: "Your treatment may require a formulary exception or a different coverage pathway under your plan.",
+    body: "You may need a formulary exception or different coverage pathway.",
   },
   {
     title: "Plan exclusion",
-    body: "Some plans exclude certain categories of care. We help you understand whether the issue appears to be a plan-level exclusion and prepare next-step language.",
+    body: "Your plan excludes this category of care — we prepare escalation language.",
   },
 ];
 
@@ -29,10 +29,10 @@ export function Problem() {
 
           <div className="grid gap-10 lg:grid-cols-[1.1fr_1fr] lg:gap-20">
             <h2 className="font-heavy text-5xl uppercase leading-[0.9] tracking-tight text-white lg:text-6xl">
-              Insurance denial letters are confusing. <span className="text-strike">We make the next step clear.</span>
+              Denial letters are confusing. <span className="text-strike">We make the next step clear.</span>
             </h2>
             <p className="max-w-[55ch] text-pretty text-base leading-relaxed text-zinc-400">
-              When coverage is denied, it is not always obvious whether you need an appeal, a prior authorization resubmission, a formulary exception, step therapy documentation, or an employer benefits escalation. Most people are left bouncing between their doctor&apos;s office, insurer, and benefits department — without knowing what to ask, who to call, or what to send next.
+              Appeal? Resubmission? Exception? Escalation? Most people get stuck bouncing between their doctor, insurer, and benefits team — without knowing what to ask or send next.
             </p>
           </div>
         </div>
@@ -57,7 +57,7 @@ export function Problem() {
               Not sure?
             </span>
             <p className="mt-4 max-w-[65ch] text-sm leading-relaxed text-zinc-400">
-              Upload your denial letter and we&apos;ll help you identify whether this looks like prior authorization, step therapy, a coverage issue, or a plan-level exclusion before we map out the next move.
+              Upload your denial letter and we&apos;ll identify the type before mapping the next move.
             </p>
           </div>
           <div className="flex items-center bg-forge-950 p-8 lg:justify-end">

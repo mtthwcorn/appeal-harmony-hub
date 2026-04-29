@@ -1,19 +1,17 @@
 export function Comparison() {
   const generic = [
     "One-size-fits-all appeal letter",
-    "May not identify the denial type",
-    "May miss doctor-office next steps",
-    "May not address step therapy or coverage issues",
+    "Doesn't identify your denial type",
+    "Misses doctor-office next steps",
+    "Ignores step therapy or coverage rules",
   ];
   const ours = [
-    "Denial-letter review tailored to your situation",
+    "Review tailored to your denial letter",
     "Denial-type triage",
     "Appeal or resubmission guidance",
-    "Doctor-office message",
-    "Insurer call script",
-    "Document checklist",
-    "Cost impact summary",
-    "HR/benefits escalation language when relevant",
+    "Doctor message + insurer call script",
+    "Document checklist + cost summary",
+    "HR/benefits escalation when relevant",
   ];
 
   return (
@@ -21,11 +19,11 @@ export function Comparison() {
       <div className="mx-auto w-full max-w-[1440px] px-6 lg:px-12">
         <div className="mb-16 grid gap-10 lg:grid-cols-[1fr_1fr] lg:gap-20">
           <h2 className="font-heavy text-5xl uppercase leading-[0.9] tracking-tight text-white lg:text-6xl">
-            Not every coverage denial<br />
+            Not every denial<br />
             <span className="text-strike">needs the same response.</span>
           </h2>
           <p className="max-w-[55ch] text-pretty text-base leading-relaxed text-zinc-400">
-            A generic appeal letter is not always enough. A coverage denial may involve missing chart notes, diagnosis criteria, step therapy requirements, prior care history, coverage restrictions, or plan-level exclusions. overturned_ helps you understand the type of denial first, then prepares the right next-step packet.
+            A generic letter rarely works. We identify the denial type first, then build the packet that fits.
           </p>
         </div>
 

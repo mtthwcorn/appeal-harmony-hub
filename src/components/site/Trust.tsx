@@ -1,16 +1,16 @@
 const dos = [
   "Review your denial letter",
-  "Explain the denial in plain English",
+  "Explain it in plain English",
   "Identify likely next steps",
-  "Prepare appeal-related documents",
-  "Help organize what to ask your doctor and insurer",
+  "Prepare appeal documents",
+  "Organize what to ask your doctor and insurer",
 ];
 
 const donts = [
   "Replace your doctor",
   "Guarantee approval or coverage",
   "Provide medical, legal, or insurance advice",
-  "Act as your insurance company or healthcare provider",
+  "Act as your insurer or healthcare provider",
 ];
 
 export function Trust() {

@@ -8,11 +8,11 @@ export function CTA() {
           Intake Open · Delivered 24–48 hrs
         </div>
         <h2 className="font-heavy text-5xl uppercase leading-[0.9] tracking-tight text-white lg:text-8xl">
-          Turn your denial letter<br />
-          <span className="text-strike">into a clearer next-step plan.</span>
+          Turn your denial<br />
+          <span className="text-strike">into a next step.</span>
         </h2>
         <p className="max-w-[55ch] text-pretty text-lg text-zinc-400">
-          Get a clearer appeal packet and next-step plan for your insurance denial.
+          Get an organized appeal packet built around your denial.
         </p>
         <a
           href="#pricing"

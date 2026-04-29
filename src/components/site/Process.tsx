@@ -2,22 +2,22 @@ const steps = [
   {
     n: "01",
     title: "Upload your denial",
-    body: "Add your denial letter or describe what your insurer said. Tell us your insurer and the type of denial.",
+    body: "Send your denial letter or describe what your insurer said.",
   },
   {
     n: "02",
-    title: "Get a denial breakdown",
-    body: "We summarize the reason for denial, the likely missing information, and the next steps to consider — prior authorization, step therapy, coverage exception, missing documentation, or plan exclusion.",
+    title: "Get a breakdown",
+    body: "We identify the denial type and what's likely missing.",
   },
   {
     n: "03",
-    title: "Build your appeal packet",
-    body: "Get an organized packet with an appeal letter draft, doctor-office message, insurer call script, cost impact summary, and document checklist.",
+    title: "Receive your packet",
+    body: "Appeal draft, doctor message, call script, checklist, and cost summary.",
   },
   {
     n: "04",
-    title: "You take the next step",
-    body: "Use the packet to follow up with your doctor's office, insurer, or employer benefits team.",
+    title: "Take the next step",
+    body: "Use the packet to follow up with your doctor, insurer, or benefits team.",
   },
 ];
 

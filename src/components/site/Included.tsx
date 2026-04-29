@@ -1,23 +1,23 @@
 const steps = [
   {
     title: "Denial Letter Summary",
-    copy: "A plain-English explanation of what the insurer appears to be saying.",
+    copy: "Plain-English explanation of what your insurer is saying.",
   },
   {
     title: "Appeal Letter Draft",
-    copy: "A draft appeal letter framed around your denial reason — appeal, resubmission, coverage exception, step therapy response, or benefits escalation.",
+    copy: "A draft framed around your specific denial reason.",
   },
   {
     title: "Doctor-Office Message",
-    copy: "A copy-paste message asking your doctor's office for the documentation that may be needed.",
+    copy: "Copy-paste message asking your doctor for the right documentation.",
   },
   {
     title: "Insurer Call Script",
-    copy: "Simple questions to ask your insurance company so you can confirm the appeal process, fax/upload instructions, deadlines, and criteria.",
+    copy: "Questions to confirm the appeal process, deadlines, and criteria.",
   },
   {
     title: "Document Checklist",
-    copy: "A checklist of records that may support the case, such as chart notes, diagnosis codes, prior treatments, comorbidities, labs, and history of care.",
+    copy: "Records that support your case — chart notes, codes, prior treatments, labs.",
   },
 ];
 
@@ -34,7 +34,7 @@ export function Included() {
             What your <span className="text-strike">packet includes.</span>
           </h2>
           <p className="text-pretty text-base text-zinc-400 lg:text-lg">
-            Five clear pieces, organized around your specific denial — plus a cost impact summary in your packet. No legal jargon. Nothing combative. Just the documents and language you need to move forward.
+            Five pieces plus a cost summary, organized around your denial. No jargon. Just what you need to move forward.
           </p>
         </div>
 
@@ -56,7 +56,7 @@ export function Included() {
         </ol>
 
         <p className="mx-auto mt-12 max-w-[80ch] text-center font-mono text-xs leading-relaxed text-zinc-500">
-          overturned_ does not provide medical, legal, or insurance advice and does not guarantee approval. We help you understand your denial and prepare organized appeal-related documents.
+          Not medical, legal, or insurance advice. No approval guarantee.
         </p>
 
         <div className="mt-12 flex justify-center">
