@@ -1,11 +1,12 @@
 import { useState } from "react";
-import { denialTypes, medications } from "@/lib/intake";
+import { denialTypes, medications, tierOptions } from "@/lib/intake";
 import { sendIntakeEmail } from "@/lib/send-intake-email";
 
 export function Intake() {
   const [submitted, setSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitError, setSubmitError] = useState<string | null>(null);
+  const [selectedTier, setSelectedTier] = useState<string>(tierOptions[0]);
 
   return (
     <section id="intake" className="border-t border-forge-800 bg-forge-950 py-24 lg:py-32">
@@ -40,6 +41,7 @@ export function Intake() {
                   insuranceCompany: String(formData.get("insuranceCompany") ?? ""),
                   denialType: String(formData.get("denialType") ?? ""),
                   hasDenialLetter: String(formData.get("hasDenialLetter") ?? ""),
+                  tier: String(formData.get("tier") ?? ""),
                   description: String(formData.get("description") ?? ""),
                   consent: formData.get("consent") === "on",
                 },
@@ -166,6 +168,35 @@ export function Intake() {
                   className={inputClass}
                   placeholder="Briefly describe what happened..."
                 />
+              </Field>
+
+              <Field label="Which option do you want?">
+                <div className="grid grid-cols-1 gap-3 md:grid-cols-2">
+                  {tierOptions.map((tier) => {
+                    const active = selectedTier === tier;
+                    return (
+                      <label
+                        key={tier}
+                        className={`flex cursor-pointer items-start gap-3 border p-4 transition-colors ${
+                          active
+                            ? "border-strike bg-forge-900"
+                            : "border-forge-800 bg-forge-950 hover:border-strike"
+                        }`}
+                      >
+                        <input
+                          type="radio"
+                          name="tier"
+                          value={tier}
+                          required
+                          checked={active}
+                          onChange={() => setSelectedTier(tier)}
+                          className="mt-1"
+                        />
+                        <span className="font-mono text-sm text-white">{tier}</span>
+                      </label>
+                    );
+                  })}
+                </div>
               </Field>
 
               <label className="flex items-start gap-3 font-mono text-xs leading-relaxed text-zinc-400">
