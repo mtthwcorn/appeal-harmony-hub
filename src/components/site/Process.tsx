@@ -1,23 +1,23 @@
 const steps = [
   {
     n: "01",
-    title: "Tell us what was denied",
-    body: "Choose the medication, insurer, and denial type. Upload your denial letter after checkout or start with a short summary.",
+    title: "Upload your denial",
+    body: "Add your denial letter or describe what your insurer said. Tell us your insurer and the type of denial.",
   },
   {
     n: "02",
-    title: "We review the denial type",
-    body: "We identify whether the issue appears to be prior authorization, step therapy, formulary restriction, missing documentation, plan exclusion, or medical necessity.",
+    title: "Get a denial breakdown",
+    body: "We summarize the reason for denial, the likely missing information, and the next steps to consider — prior authorization, step therapy, coverage exception, missing documentation, or plan exclusion.",
   },
   {
     n: "03",
-    title: "You receive your appeal packet",
-    body: "You get a plain-English explanation, draft appeal letter, doctor-office message, insurer call script, and document checklist.",
+    title: "Build your appeal packet",
+    body: "Get an organized packet with an appeal letter draft, doctor-office message, insurer call script, cost impact summary, and document checklist.",
   },
   {
     n: "04",
     title: "You take the next step",
-    body: "Use the packet to speak with your doctor's office, insurer, pharmacy, or employer benefits department.",
+    body: "Use the packet to follow up with your doctor's office, insurer, or employer benefits team.",
   },
 ];
 
