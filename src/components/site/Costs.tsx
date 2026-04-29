@@ -1,9 +1,19 @@
-const meds = [
-  { name: "Wegovy", selfPay: "$199–$499 / mo", withCoverage: "As low as $0–$25 / mo" },
-  { name: "Zepbound", selfPay: "$299–$499 / mo", withCoverage: "As low as $25 / mo" },
-  { name: "Ozempic", selfPay: "$199–$349 / mo", withCoverage: "As low as $25 / mo" },
-  { name: "Mounjaro", selfPay: "$349–$499 / mo", withCoverage: "As low as $25 / mo" },
-  { name: "Saxenda", selfPay: "$700–$1,350 / mo", withCoverage: "As low as $25 / mo" },
+const tiers = [
+  {
+    name: "Without coverage",
+    range: "$500–$1,200+ / mo",
+    note: "Full out-of-pocket cost when insurance does not cover your treatment.",
+  },
+  {
+    name: "With partial coverage",
+    range: "$100–$500 / mo",
+    note: "Coverage applies, but you still pay a meaningful share each month.",
+  },
+  {
+    name: "With stronger plan coverage",
+    range: "$0–$100 / mo",
+    note: "Lower out-of-pocket cost when your plan approves coverage.",
+  },
 ];
 
 export function Costs() {
@@ -12,41 +22,41 @@ export function Costs() {
       <div className="mx-auto w-full max-w-[1440px] px-6 lg:px-12">
         <div className="mb-16 grid gap-10 lg:grid-cols-[1.1fr_1fr] lg:gap-20">
           <h2 className="font-heavy text-5xl uppercase leading-[0.9] tracking-tight text-white lg:text-6xl">
-            Self-pay vs <span className="text-strike">with coverage.</span>
+            Know the <span className="text-strike">cost of waiting.</span>
           </h2>
           <p className="max-w-[55ch] text-pretty text-base leading-relaxed text-zinc-400">
-            Without coverage, GLP-1 medications run hundreds of dollars a month — even through manufacturer self-pay programs. With approved insurance coverage and a manufacturer savings card, eligible patients often pay as little as $25 a month. That gap is why a denial is worth appealing.
+            A denial is not just paperwork. It can change what you pay out of pocket. overturned_ helps you compare estimated self-pay costs, covered costs, and potential savings if coverage is approved.
           </p>
         </div>
 
         <div className="overflow-hidden border border-forge-800">
-          <div className="hidden grid-cols-[1.2fr_1fr_1fr] bg-forge-950 font-mono text-[10px] uppercase tracking-widest text-zinc-500 md:grid">
-            <div className="border-b border-r border-forge-800 px-6 py-4">Medication</div>
-            <div className="border-b border-r border-forge-800 px-6 py-4">Self-pay (mfr. program)*</div>
-            <div className="border-b border-forge-800 px-6 py-4">With coverage*</div>
+          <div className="hidden grid-cols-[1.4fr_1fr_1.6fr] bg-forge-950 font-mono text-[10px] uppercase tracking-widest text-zinc-500 md:grid">
+            <div className="border-b border-r border-forge-800 px-6 py-4">Coverage scenario</div>
+            <div className="border-b border-r border-forge-800 px-6 py-4">Estimated cost*</div>
+            <div className="border-b border-forge-800 px-6 py-4">What it means</div>
           </div>
-          {meds.map((m, i) => (
+          {tiers.map((t, i) => (
             <div
-              key={m.name}
-              className={`grid grid-cols-1 md:grid-cols-[1.2fr_1fr_1fr] ${i % 2 === 0 ? "bg-forge-950" : "bg-forge-900"}`}
+              key={t.name}
+              className={`grid grid-cols-1 md:grid-cols-[1.4fr_1fr_1.6fr] ${i % 2 === 0 ? "bg-forge-950" : "bg-forge-900"}`}
             >
               <div className="border-b border-forge-800 px-6 py-5 font-heavy text-lg uppercase tracking-tight text-white md:border-b-0 md:border-r">
-                {m.name}
+                {t.name}
               </div>
-              <div className="border-b border-forge-800 px-6 py-5 font-mono text-sm text-zinc-300 md:border-b-0 md:border-r">
-                <span className="mb-1 block font-mono text-[10px] uppercase tracking-widest text-zinc-500 md:hidden">Self-pay</span>
-                {m.selfPay}
+              <div className="border-b border-forge-800 px-6 py-5 font-mono text-sm text-strike md:border-b-0 md:border-r">
+                <span className="mb-1 block font-mono text-[10px] uppercase tracking-widest text-zinc-500 md:hidden">Estimated cost</span>
+                {t.range}
               </div>
-              <div className="px-6 py-5 font-mono text-sm text-strike">
-                <span className="mb-1 block font-mono text-[10px] uppercase tracking-widest text-zinc-500 md:hidden">With coverage</span>
-                {m.withCoverage}
+              <div className="px-6 py-5 font-mono text-sm text-zinc-300">
+                <span className="mb-1 block font-mono text-[10px] uppercase tracking-widest text-zinc-500 md:hidden">What it means</span>
+                {t.note}
               </div>
             </div>
           ))}
         </div>
 
         <p className="mt-6 max-w-[80ch] font-mono text-[11px] leading-relaxed text-zinc-500">
-          *Examples only, updated for 2026. Self-pay reflects current manufacturer direct-purchase programs (e.g. LillyDirect Zepbound $299–$499/mo, NovoCare Wegovy $199–$499/mo, Ozempic self-pay $199–$349/mo). With-coverage figures reflect typical commercially-insured copays when manufacturer savings cards are applied. Your actual cost varies by pharmacy, dose, region, plan design, and eligibility. overturned_ does not set prices and does not guarantee approval or any specific out-of-pocket cost.
+          *Examples only. Actual costs depend on your plan, deductible, benefits, provider, and treatment. overturned_ does not set prices and does not guarantee approval or any specific out-of-pocket cost.
         </p>
 
         <div className="mt-10 flex justify-center">
@@ -54,7 +64,7 @@ export function Costs() {
             href="#pricing"
             className="inline-flex items-center justify-center rounded-full bg-strike px-10 py-5 font-heavy text-base uppercase tracking-tight text-forge-950 transition-all duration-300 hover:bg-white hover:shadow-[var(--shadow-strike)]"
           >
-            Start My Denial Review — $49
+            Start My Appeal Review — $49
           </a>
         </div>
       </div>

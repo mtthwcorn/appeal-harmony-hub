@@ -12,7 +12,7 @@ export function Footer() {
           </span>
           </div>
           <p className="max-w-[60ch] font-mono text-[10px] leading-relaxed text-zinc-500">
-            overturned_ is not a medical provider, pharmacy, insurer, or law firm. overturned_ does not prescribe medication, provide medical advice, provide legal advice, or guarantee insurance approval. Services are limited to educational, administrative, and document-preparation support for patients navigating insurance denial paperwork.
+            overturned_ is not a medical provider, insurer, or law firm. overturned_ does not provide medical, legal, or insurance advice and does not guarantee approval. Services are limited to educational, administrative, and document-preparation support for people navigating insurance denial paperwork.
           </p>
         </div>
         <div className="flex flex-wrap gap-x-8 gap-y-3 font-mono text-xs uppercase tracking-widest text-zinc-500">

@@ -1,19 +1,19 @@
 const faqs = [
   {
-    q: "Do you prescribe GLP-1 medications?",
-    a: "No. overturned_ does not prescribe medications, provide medical care, or operate as a pharmacy. We help patients understand insurance denial paperwork and prepare appeal-related documents.",
+    q: "Do you provide medical care or prescribe treatments?",
+    a: "No. overturned_ is not a medical provider. We help people understand insurance denial paperwork and prepare appeal-related documents.",
   },
   {
-    q: "Do you guarantee my insurance will approve the medication?",
+    q: "Do you guarantee my insurance will approve coverage?",
     a: "No. We cannot guarantee approval or coverage. We prepare organized documents and next-step guidance that may help you respond to the denial.",
   },
   {
-    q: "What medications do you help with?",
-    a: "We help with insurance denial paperwork related to GLP-1 and weight-loss medication coverage issues, including denials involving Zepbound, Wegovy, Ozempic, Mounjaro, Saxenda, and similar treatments.",
+    q: "What kinds of denials do you help with?",
+    a: "We help with insurance denial paperwork — including prior authorization denials, step therapy requirements, coverage exceptions, missing-documentation denials, and plan-level coverage issues.",
   },
   {
-    q: "What if my plan excludes weight-loss medications?",
-    a: "Some plans exclude weight-loss medications entirely. In those cases, an appeal may be difficult. We can help you understand whether the issue appears to be a plan exclusion, formulary issue, prior authorization denial, or missing documentation issue, and provide next-step language for your insurer or employer benefits department.",
+    q: "What if my plan excludes my treatment entirely?",
+    a: "Some plans exclude certain categories of care entirely. In those cases, a standard appeal may be difficult. We can help you understand whether the issue appears to be a plan exclusion, coverage issue, prior authorization denial, or missing-documentation issue, and provide next-step language for your insurer or employer benefits department.",
   },
   {
     q: "What if my doctor's office already submitted a prior authorization?",
@@ -21,11 +21,11 @@ const faqs = [
   },
   {
     q: "Is this legal or medical advice?",
-    a: "No. overturned_ is not a law firm, medical provider, insurer, or pharmacy. The information and documents provided are for educational and administrative support only.",
+    a: "No. overturned_ is not a law firm, medical provider, or insurer. The information and documents provided are for educational and administrative support only.",
   },
   {
     q: "How fast do I get the review?",
-    a: "Most denial reviews are delivered within 24–48 hours.",
+    a: "Most appeal reviews are delivered within 24–48 hours.",
   },
 ];
 

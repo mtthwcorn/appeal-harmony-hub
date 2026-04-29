@@ -1,15 +1,15 @@
 const steps = [
   {
-    title: "Denial Summary",
+    title: "Denial Letter Summary",
     copy: "A plain-English explanation of what the insurer appears to be saying.",
   },
   {
-    title: "Recommended Next Step",
-    copy: "Whether this looks like an appeal, prior authorization resubmission, formulary exception, step therapy response, or benefits escalation.",
+    title: "Appeal Letter Draft",
+    copy: "A draft appeal letter framed around your denial reason — appeal, resubmission, coverage exception, step therapy response, or benefits escalation.",
   },
   {
     title: "Doctor-Office Message",
-    copy: "A copy-paste message asking your prescriber's office for the documentation that may be needed.",
+    copy: "A copy-paste message asking your doctor's office for the documentation that may be needed.",
   },
   {
     title: "Insurer Call Script",
@@ -17,7 +17,7 @@ const steps = [
   },
   {
     title: "Document Checklist",
-    copy: "A checklist of records that may support the case, such as chart notes, BMI history, diagnosis codes, prior medications, comorbidities, labs, or prior weight-loss attempts.",
+    copy: "A checklist of records that may support the case, such as chart notes, diagnosis codes, prior treatments, comorbidities, labs, and history of care.",
   },
 ];
 
@@ -34,7 +34,7 @@ export function Included() {
             What your <span className="text-strike">packet includes.</span>
           </h2>
           <p className="text-pretty text-base text-zinc-400 lg:text-lg">
-            Five clear pieces, organized around your specific denial. No legal jargon. Nothing combative. Just the documents and language you need to move forward.
+            Five clear pieces, organized around your specific denial — plus a cost impact summary in your packet. No legal jargon. Nothing combative. Just the documents and language you need to move forward.
           </p>
         </div>
 
@@ -56,7 +56,7 @@ export function Included() {
         </ol>
 
         <p className="mx-auto mt-12 max-w-[80ch] text-center font-mono text-xs leading-relaxed text-zinc-500">
-          overturned_ does not prescribe medication, provide medical advice, provide legal advice, or guarantee approval. We help you understand your denial and prepare organized appeal-related documents.
+          overturned_ does not provide medical, legal, or insurance advice and does not guarantee approval. We help you understand your denial and prepare organized appeal-related documents.
         </p>
 
         <div className="mt-12 flex justify-center">
@@ -64,7 +64,7 @@ export function Included() {
             href="#pricing"
             className="inline-flex items-center justify-center rounded-full bg-strike px-10 py-5 font-heavy text-base uppercase tracking-tight text-forge-950 transition-all duration-300 hover:bg-white hover:shadow-[var(--shadow-strike)] lg:text-lg"
           >
-            Start My Denial Review — $49
+            Start My Appeal Review — $49
           </a>
         </div>
       </div>

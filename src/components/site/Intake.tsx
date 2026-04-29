@@ -16,7 +16,7 @@ export function Intake() {
             Intake
           </div>
           <h2 className="font-heavy text-5xl uppercase leading-[0.9] tracking-tight text-white lg:text-6xl">
-            Start your <span className="text-strike">denial review.</span>
+            Start your <span className="text-strike">appeal review.</span>
           </h2>
           <p className="max-w-[45ch] text-base leading-relaxed text-zinc-400">
             Tell us a little about your denial. We'll send next steps and prepare your packet within 24–48 hours.
@@ -68,9 +68,9 @@ export function Intake() {
                   Check your email.
                 </h3>
                 <p className="font-mono text-sm leading-relaxed text-zinc-400">
-                  We sent initial next steps for your denial review. The next action is
-                  sending your denial letter, insurer screenshot, or rejection message so
-                  we can map the denial and prepare the right output.
+                  We sent initial next steps for your appeal review. The next action is
+                  sending your denial letter or insurer screenshot so we can map the denial
+                  and prepare the right output.
                 </p>
               </div>
 
@@ -83,9 +83,9 @@ export function Intake() {
                     Reply with the denial letter.
                   </h4>
                   <p className="mt-3 font-mono text-sm leading-relaxed text-zinc-400">
-                    Send the denial letter PDF, insurer portal screenshot, or pharmacy
-                    rejection message by replying to the confirmation email. If you do not
-                    have it yet, send it as soon as you receive it.
+                    Send the denial letter PDF or insurer portal screenshot by replying to
+                    the confirmation email. If you do not have it yet, send it as soon as
+                    you receive it.
                   </p>
                 </div>
 
@@ -116,9 +116,9 @@ export function Intake() {
                 </Field>
               </div>
 
-              <Field label="Medication denied">
+              <Field label="What was denied">
                 <select required name="medication" className={inputClass} defaultValue="">
-                  <option value="" disabled>Select medication</option>
+                  <option value="" disabled>Select what was denied</option>
                   {medications.map((medication) => (
                     <option key={medication} value={medication}>
                       {medication}
@@ -171,7 +171,7 @@ export function Intake() {
               <label className="flex items-start gap-3 font-mono text-xs leading-relaxed text-zinc-400">
                 <input type="checkbox" name="consent" required className="mt-1" />
                 <span>
-                  I understand overturned_ does not provide medical advice, legal advice, prescribing, or guarantee insurance approval.
+                  I understand overturned_ does not provide medical, legal, or insurance advice and does not guarantee approval.
                 </span>
               </label>
 

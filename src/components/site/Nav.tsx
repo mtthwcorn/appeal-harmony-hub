@@ -14,7 +14,7 @@ export function SiteNav() {
           {[
             { label: "How it works", href: "#process" },
             { label: "What you get", href: "#included" },
-            { label: "Why appeal?", href: "#costs" },
+            { label: "Cost of waiting", href: "#costs" },
             { label: "Pricing", href: "#pricing" },
             { label: "FAQ", href: "#faq" },
           ].map((l) => (
@@ -27,7 +27,7 @@ export function SiteNav() {
           href="#pricing"
           className="inline-flex h-11 items-center justify-center rounded-full bg-white px-6 font-heavy text-sm uppercase tracking-tight text-forge-950 transition-colors hover:bg-strike"
         >
-          Start Denial Review
+          Start Appeal Review
         </a>
       </nav>
     </header>

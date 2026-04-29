@@ -7,10 +7,9 @@ const dos = [
 ];
 
 const donts = [
-  "Prescribe medication",
   "Replace your doctor",
-  "Guarantee approval",
-  "Provide medical or legal advice",
+  "Guarantee approval or coverage",
+  "Provide medical, legal, or insurance advice",
   "Act as your insurance company or healthcare provider",
 ];
 

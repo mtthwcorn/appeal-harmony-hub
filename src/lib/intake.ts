@@ -1,20 +1,19 @@
 import { z } from "zod";
 
 export const medications = [
-  "Zepbound",
-  "Wegovy",
-  "Ozempic",
-  "Mounjaro",
-  "Saxenda",
+  "Treatment my doctor recommended",
+  "Treatment requiring prior authorization",
+  "Specialty treatment or therapy",
+  "Ongoing treatment my plan stopped covering",
   "Other",
 ] as const;
 
 export const denialTypes = [
   "Prior authorization denied",
   "Step therapy required",
-  "Drug not covered",
-  "Plan excludes weight-loss medication",
-  "Pharmacy says insurance denied it",
+  "Treatment not covered by my plan",
+  "Plan excludes this category of care",
+  "Insurer requested more documentation",
   "I am not sure",
 ] as const;
 
