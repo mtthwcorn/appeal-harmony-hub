@@ -1,3 +1,4 @@
 RESEND_API_KEY=re_replace_after_rotating_your_key
 RESEND_FROM_EMAIL="overturned_ <intake@send.yourdomain.com>"
 INTAKE_NOTIFICATION_TO=you@yourdomain.com
+GOOGLE_APPS_SCRIPT_URL=https://script.google.com/macros/s/your_web_app_id/exec

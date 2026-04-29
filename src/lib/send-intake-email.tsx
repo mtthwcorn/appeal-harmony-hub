@@ -1,6 +1,7 @@
 import { createServerFn } from "@tanstack/react-start";
 import { Resend } from "resend";
 import { IntakeSubmissionEmail } from "@/emails/IntakeSubmissionEmail";
+import { appendIntakeToGoogleSheet } from "@/lib/google-sheets";
 import { intakeSubmissionSchema } from "@/lib/intake";
 
 export const sendIntakeEmail = createServerFn({ method: "POST" })
@@ -9,6 +10,8 @@ export const sendIntakeEmail = createServerFn({ method: "POST" })
     const resend = new Resend(getRequiredEnv("RESEND_API_KEY"));
     const from = getRequiredEnv("RESEND_FROM_EMAIL");
     const notificationTo = getOptionalEnv("INTAKE_NOTIFICATION_TO");
+
+    await appendIntakeToGoogleSheet(data);
 
     const confirmation = await resend.emails.send({
       from,
