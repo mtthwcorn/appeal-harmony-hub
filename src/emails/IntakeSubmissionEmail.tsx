@@ -60,7 +60,7 @@ export function IntakeSubmissionEmail({
                 <Text style={calloutText}>
                   {hasDenialLetter
                     ? "Reply to this email with the denial letter PDF, screenshot, or copied denial text so we can start the review."
-                    : "As soon as you get the denial letter, insurer portal screenshot, or pharmacy rejection message, reply to this email and send it over."}
+                    : "As soon as you get the denial letter or insurer portal screenshot, reply to this email and send it over."}
                 </Text>
               </Section>
             ) : null}
@@ -69,7 +69,7 @@ export function IntakeSubmissionEmail({
               <Text style={summaryTitle}>Submission summary</Text>
               <Field label="First name" value={submission.firstName} />
               <Field label="Email" value={submission.email} />
-              <Field label="Medication denied" value={submission.medication} />
+              <Field label="What was denied" value={submission.medication} />
               <Field label="Insurance company" value={submission.insuranceCompany} />
               <Field label="What happened" value={submission.denialType} />
               <Field
@@ -94,13 +94,13 @@ export function IntakeSubmissionEmail({
                   body={
                     hasDenialLetter
                       ? "Reply with the denial letter, screenshot, or insurer denial text so we can review the exact wording and requirements."
-                      : "Reply with the denial letter as soon as you have it. If you only have a portal screenshot or pharmacy message, send that first."
+                      : "Reply with the denial letter as soon as you have it. If you only have a portal screenshot, send that first."
                   }
                 />
                 <Step
                   number="02"
                   title="We map the denial"
-                  body="We review whether this looks like prior auth, step therapy, formulary, exclusion, missing documentation, or another coverage issue."
+                  body="We review whether this looks like prior authorization, step therapy, a coverage exception, missing documentation, plan exclusion, or another coverage issue."
                 />
                 <Step
                   number="03"
