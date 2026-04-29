@@ -1,7 +1,7 @@
 const tiers = [
   {
     title: "Appeal Letter Packet",
-    price: "$149",
+    price: "$49",
     badge: "Most popular",
     description: "A customized appeal letter and core documents to respond to an insurance denial.",
     items: [
@@ -20,7 +20,7 @@ const tiers = [
   },
   {
     title: "Guided Appeal Support",
-    price: "$399",
+    price: "$149",
     badge: null,
     description: "Live help and guidance through the appeal process, including support if the denial continues.",
     items: [
