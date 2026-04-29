@@ -2,17 +2,17 @@ const tiers = [
   {
     name: "Without coverage",
     range: "$500–$1,200+ / mo",
-    note: "Full out-of-pocket cost when insurance does not cover your treatment.",
+    note: "Full out-of-pocket cost when insurance denies.",
   },
   {
     name: "With partial coverage",
     range: "$100–$500 / mo",
-    note: "Coverage applies, but you still pay a meaningful share each month.",
+    note: "Covered, but you still pay a meaningful share.",
   },
   {
     name: "With stronger plan coverage",
     range: "$0–$100 / mo",
-    note: "Lower out-of-pocket cost when your plan approves coverage.",
+    note: "Lower out-of-pocket cost when coverage is approved.",
   },
 ];
 
@@ -25,7 +25,7 @@ export function Costs() {
             Know the <span className="text-strike">cost of waiting.</span>
           </h2>
           <p className="max-w-[55ch] text-pretty text-base leading-relaxed text-zinc-400">
-            A denial is not just paperwork. It can change what you pay out of pocket. overturned_ helps you compare estimated self-pay costs, covered costs, and potential savings if coverage is approved.
+            A denial isn't just paperwork — it changes what you pay. See how coverage shifts your monthly cost.
           </p>
         </div>
 
@@ -56,7 +56,7 @@ export function Costs() {
         </div>
 
         <p className="mt-6 max-w-[80ch] font-mono text-[11px] leading-relaxed text-zinc-500">
-          *Examples only. Actual costs depend on your plan, deductible, benefits, provider, and treatment. overturned_ does not set prices and does not guarantee approval or any specific out-of-pocket cost.
+          *Examples only. Actual costs depend on your plan, deductible, provider, and treatment.
         </p>
 
         <div className="mt-10 flex justify-center">

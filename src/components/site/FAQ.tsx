@@ -1,31 +1,31 @@
 const faqs = [
   {
-    q: "Do you provide medical care or prescribe treatments?",
-    a: "No. overturned_ is not a medical provider. We help people understand insurance denial paperwork and prepare appeal-related documents.",
+    q: "Do you provide medical care?",
+    a: "No. We help you understand denial paperwork and prepare appeal documents.",
   },
   {
-    q: "Do you guarantee my insurance will approve coverage?",
-    a: "No. We cannot guarantee approval or coverage. We prepare organized documents and next-step guidance that may help you respond to the denial.",
+    q: "Will my insurance approve coverage?",
+    a: "We can't guarantee approval. We prepare the organized documents that help you respond.",
   },
   {
-    q: "What kinds of denials do you help with?",
-    a: "We help with insurance denial paperwork — including prior authorization denials, step therapy requirements, coverage exceptions, missing-documentation denials, and plan-level coverage issues.",
+    q: "What denials do you help with?",
+    a: "Prior authorization, step therapy, coverage exceptions, missing-documentation denials, and plan-level issues.",
   },
   {
     q: "What if my plan excludes my treatment entirely?",
-    a: "Some plans exclude certain categories of care entirely. In those cases, a standard appeal may be difficult. We can help you understand whether the issue appears to be a plan exclusion, coverage issue, prior authorization denial, or missing-documentation issue, and provide next-step language for your insurer or employer benefits department.",
+    a: "Standard appeals may not work, but we provide escalation language for your insurer or employer benefits team.",
   },
   {
-    q: "What if my doctor's office already submitted a prior authorization?",
-    a: "That is common. We can help you understand the denial, identify what documents may be missing, and prepare a message you can send to your doctor's office asking for specific information or next steps.",
+    q: "What if my doctor already submitted a prior authorization?",
+    a: "Common. We identify what's missing and prepare a message to send your doctor's office.",
   },
   {
     q: "Is this legal or medical advice?",
-    a: "No. overturned_ is not a law firm, medical provider, or insurer. The information and documents provided are for educational and administrative support only.",
+    a: "No. We're not a law firm, medical provider, or insurer. Documents are for educational and administrative support only.",
   },
   {
-    q: "How fast do I get the review?",
-    a: "Most appeal reviews are delivered within 24–48 hours.",
+    q: "How fast is delivery?",
+    a: "Most reviews delivered within 24–48 hours.",
   },
 ];
 

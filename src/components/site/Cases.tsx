@@ -1,27 +1,27 @@
 const cases = [
   {
     tag: "Prior Authorization",
-    title: "Prior authorization denied by your insurer.",
-    amount: "Possible next step",
-    note: "Ask what criteria were missing and prepare an appeal or resubmission packet with your doctor's office.",
+    title: "Prior authorization denied.",
+    amount: "Next step",
+    note: "Identify missing criteria and prepare a resubmission with your doctor.",
   },
   {
     tag: "Step Therapy",
-    title: "Step therapy required before approval.",
-    amount: "Possible next step",
-    note: "Document prior treatments, history of care, contraindications, and your doctor's clinical rationale.",
+    title: "Step therapy required first.",
+    amount: "Next step",
+    note: "Document prior treatments, contraindications, and clinical rationale.",
   },
   {
     tag: "Plan Exclusion",
-    title: "Your plan excludes this category of care.",
-    amount: "Possible next step",
-    note: "Confirm whether the exclusion is plan-level and prepare employer benefits escalation language.",
+    title: "Your plan excludes this care.",
+    amount: "Next step",
+    note: "Escalate to your employer benefits team with the right language.",
   },
   {
     tag: "Coverage Criteria",
-    title: "Denied because diagnosis is not covered.",
-    amount: "Possible next step",
-    note: "Clarify the diagnosis and coverage criteria with your doctor's office and insurer.",
+    title: "Diagnosis not covered.",
+    amount: "Next step",
+    note: "Clarify diagnosis and coverage criteria with your doctor and insurer.",
   },
 ];
 
@@ -34,7 +34,7 @@ export function Cases() {
             Common <span className="text-strike">denial scenarios.</span>
           </h2>
           <p className="max-w-[40ch] font-mono text-sm text-zinc-400">
-            Educational examples only. Every denial is different — we help you understand which type yours is and what to do next.
+            Educational examples. Every denial is different — we identify yours and what to do next.
           </p>
         </div>
 

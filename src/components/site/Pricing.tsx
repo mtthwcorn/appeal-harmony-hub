@@ -3,11 +3,11 @@ const tiers = [
     title: "Appeal Review + Next-Step Plan",
     price: "$49",
     badge: "Best first step",
-    description: "Best if you are not sure what your denial means or what to ask for next.",
+    description: "Not sure what your denial means or what to do next.",
     items: [
-      "Plain-English explanation of your denial",
-      "Identification of the denial type",
-      "Recommended next step: appeal, resubmission, coverage exception, step therapy response, or benefits escalation",
+      "Plain-English denial explanation",
+      "Denial-type identification",
+      "Recommended next step",
       "Document checklist",
       "Doctor-office message",
       "Insurer call script",
@@ -19,13 +19,13 @@ const tiers = [
     title: "Custom Appeal Packet",
     price: "$149",
     badge: null,
-    description: "Best if you want a more complete appeal packet prepared from your denial information.",
+    description: "A complete appeal packet built from your denial.",
     items: [
       "Everything in Appeal Review",
-      "More complete custom appeal letter draft",
-      "Organized appeal packet format",
-      "Stronger medical necessity framing based on the denial reason",
-      "One round of revision after you review the packet",
+      "Complete custom appeal letter draft",
+      "Organized packet format",
+      "Stronger medical necessity framing",
+      "One round of revisions",
     ],
     cta: "Get Appeal Packet",
     featured: true,
@@ -34,13 +34,13 @@ const tiers = [
     title: "Guided Appeal Support",
     price: "$299",
     badge: null,
-    description: "Best if you want help staying organized after the packet is prepared.",
+    description: "Help staying organized after the packet is ready.",
     items: [
       "Everything in Custom Appeal Packet",
-      "1–2 weeks of guided follow-up support",
+      "1–2 weeks of guided follow-up",
       "Help organizing submission steps",
       "HR/benefits escalation language",
-      "Follow-up questions to ask your insurer or doctor's office",
+      "Follow-up questions for insurer or doctor",
     ],
     cta: "Get Guided Support",
     featured: false,
@@ -110,7 +110,7 @@ export function Pricing() {
         </div>
 
         <p className="mt-10 max-w-[70ch] font-mono text-xs leading-relaxed text-zinc-500">
-          We do not guarantee approval or coverage. Our role is to help you understand your denial and prepare organized appeal-related documents.
+          No approval or coverage guaranteed. We help you understand your denial and prepare organized documents.
         </p>
       </div>
     </section>

@@ -20,22 +20,22 @@ export function Hero() {
 
           <h1 className="font-heavy text-balance text-6xl uppercase leading-[0.85] tracking-tight md:text-7xl lg:text-8xl">
             <span className="block text-white">Denied by insurance?</span>
-            <span className="block text-strike">Get a clearer appeal packet.</span>
+            <span className="block text-strike">Turn it into an appeal packet.</span>
           </h1>
 
           <p className="max-w-[48ch] text-pretty text-lg leading-relaxed text-zinc-400 lg:text-xl">
-            Upload your denial letter and overturned_ helps you understand what happened, what documents may be needed, and how to prepare a more complete appeal packet.
+            Upload your denial letter. We explain what it means and prepare the documents you need to push back.
           </p>
 
           <p className="max-w-[52ch] font-mono text-xs leading-relaxed text-zinc-500">
-            No approval guarantee. No medical advice. Built to help you get organized and take the next step — with a denial summary, appeal letter draft, doctor-office message, insurer call script, document checklist, and cost impact summary.
+            No approval guarantee. No medical advice. Just an organized packet — appeal draft, doctor message, call script, checklist, and cost summary.
           </p>
 
           <ul className="flex w-full max-w-[48ch] flex-col gap-4">
             {[
-              "Built for prior authorization denials, step therapy requirements, formulary exceptions, and plan-level coverage issues.",
-              "Works for any treatment your doctor recommended that your plan denied or required more documentation for.",
-              "Most reviews delivered in 24–48 hours.",
+              "Covers prior auth, step therapy, exceptions, and plan exclusions.",
+              "Works for any treatment your doctor recommended.",
+              "Delivered in 24–48 hours.",
             ].map((line, i) => (
               <li
                 key={i}
