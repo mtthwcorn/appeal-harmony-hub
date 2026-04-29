@@ -1,17 +1,11 @@
 import { useState } from "react";
-
-const meds = ["Zepbound", "Wegovy", "Ozempic", "Mounjaro", "Saxenda", "Other"];
-const denialTypes = [
-  "Prior authorization denied",
-  "Step therapy required",
-  "Drug not covered",
-  "Plan excludes weight-loss medication",
-  "Pharmacy says insurance denied it",
-  "I am not sure",
-];
+import { denialTypes, medications } from "@/lib/intake";
+import { sendIntakeEmail } from "@/lib/send-intake-email";
 
 export function Intake() {
   const [submitted, setSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState<string | null>(null);
 
   return (
     <section id="intake" className="border-t border-forge-800 bg-forge-950 py-24 lg:py-32">
@@ -30,70 +24,152 @@ export function Intake() {
         </div>
 
         <form
-          onSubmit={(e) => {
+          onSubmit={async (e) => {
             e.preventDefault();
-            setSubmitted(true);
+            setIsSubmitting(true);
+            setSubmitError(null);
+
+            const formData = new FormData(e.currentTarget);
+
+            try {
+              await sendIntakeEmail({
+                data: {
+                  firstName: String(formData.get("firstName") ?? ""),
+                  email: String(formData.get("email") ?? ""),
+                  medication: String(formData.get("medication") ?? ""),
+                  insuranceCompany: String(formData.get("insuranceCompany") ?? ""),
+                  denialType: String(formData.get("denialType") ?? ""),
+                  hasDenialLetter: String(formData.get("hasDenialLetter") ?? ""),
+                  description: String(formData.get("description") ?? ""),
+                  consent: formData.get("consent") === "on",
+                },
+              });
+
+              setSubmitted(true);
+            } catch (error) {
+              setSubmitError(
+                error instanceof Error
+                  ? error.message
+                  : "Something went wrong while sending your request.",
+              );
+            } finally {
+              setIsSubmitting(false);
+            }
           }}
           className="flex flex-col gap-6 border border-forge-800 bg-forge-900 p-8 lg:p-10"
         >
           {submitted ? (
-            <div className="flex flex-col gap-4 py-12 text-center">
-              <span className="font-mono text-[10px] uppercase tracking-widest text-strike">
-                Received
-              </span>
-              <h3 className="font-heavy text-3xl uppercase tracking-tight text-white">
-                Thank you.
-              </h3>
-              <p className="font-mono text-sm text-zinc-400">
-                We'll follow up by email with next steps for your denial review.
-              </p>
+            <div className="flex flex-col gap-8 py-4">
+              <div className="flex flex-col gap-4 text-center">
+                <span className="font-mono text-[10px] uppercase tracking-widest text-strike">
+                  Received
+                </span>
+                <h3 className="font-heavy text-3xl uppercase tracking-tight text-white">
+                  Check your email.
+                </h3>
+                <p className="font-mono text-sm leading-relaxed text-zinc-400">
+                  We sent initial next steps for your denial review. The next action is
+                  sending your denial letter, insurer screenshot, or rejection message so
+                  we can map the denial and prepare the right output.
+                </p>
+              </div>
+
+              <div className="grid gap-5 lg:grid-cols-2">
+                <div className="border border-forge-800 bg-forge-950 p-6 text-left">
+                  <span className="font-mono text-[10px] uppercase tracking-widest text-strike">
+                    Next Step
+                  </span>
+                  <h4 className="mt-3 font-heavy text-2xl uppercase tracking-tight text-white">
+                    Reply with the denial letter.
+                  </h4>
+                  <p className="mt-3 font-mono text-sm leading-relaxed text-zinc-400">
+                    Send the denial letter PDF, insurer portal screenshot, or pharmacy
+                    rejection message by replying to the confirmation email. If you do not
+                    have it yet, send it as soon as you receive it.
+                  </p>
+                </div>
+
+                <div className="border border-forge-800 bg-forge-950 p-6 text-left">
+                  <span className="font-mono text-[10px] uppercase tracking-widest text-strike">
+                    Output
+                  </span>
+                  <h4 className="mt-3 font-heavy text-2xl uppercase tracking-tight text-white">
+                    What you’ll receive back.
+                  </h4>
+                  <ul className="mt-3 flex flex-col gap-3 font-mono text-sm leading-relaxed text-zinc-400">
+                    <li>Plain-English denial breakdown and likely next step</li>
+                    <li>Draft appeal or resubmission language</li>
+                    <li>Doctor-office message and insurer call script</li>
+                    <li>Document checklist for the next submission</li>
+                  </ul>
+                </div>
+              </div>
             </div>
           ) : (
             <>
               <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
                 <Field label="First name">
-                  <input required type="text" className={inputClass} />
+                  <input required type="text" name="firstName" className={inputClass} />
                 </Field>
                 <Field label="Email">
-                  <input required type="email" className={inputClass} />
+                  <input required type="email" name="email" className={inputClass} />
                 </Field>
               </div>
 
               <Field label="Medication denied">
-                <select required className={inputClass} defaultValue="">
+                <select required name="medication" className={inputClass} defaultValue="">
                   <option value="" disabled>Select medication</option>
-                  {meds.map((m) => <option key={m} value={m}>{m}</option>)}
+                  {medications.map((medication) => (
+                    <option key={medication} value={medication}>
+                      {medication}
+                    </option>
+                  ))}
                 </select>
               </Field>
 
               <Field label="Insurance company">
-                <input required type="text" className={inputClass} placeholder="e.g. Blue Cross, Aetna, UnitedHealthcare" />
+                <input
+                  required
+                  type="text"
+                  name="insuranceCompany"
+                  className={inputClass}
+                  placeholder="e.g. Blue Cross, Aetna, UnitedHealthcare"
+                />
               </Field>
 
               <Field label="What happened?">
-                <select required className={inputClass} defaultValue="">
+                <select required name="denialType" className={inputClass} defaultValue="">
                   <option value="" disabled>Select what happened</option>
-                  {denialTypes.map((d) => <option key={d} value={d}>{d}</option>)}
+                  {denialTypes.map((denialType) => (
+                    <option key={denialType} value={denialType}>
+                      {denialType}
+                    </option>
+                  ))}
                 </select>
               </Field>
 
               <Field label="Do you have a denial letter?">
                 <div className="flex gap-6 font-mono text-sm text-zinc-300">
                   <label className="inline-flex items-center gap-2">
-                    <input type="radio" name="letter" value="yes" required /> Yes
+                    <input type="radio" name="hasDenialLetter" value="yes" required /> Yes
                   </label>
                   <label className="inline-flex items-center gap-2">
-                    <input type="radio" name="letter" value="no" /> No
+                    <input type="radio" name="hasDenialLetter" value="no" /> No
                   </label>
                 </div>
               </Field>
 
               <Field label="Short description">
-                <textarea rows={4} className={inputClass} placeholder="Briefly describe what happened…" />
+                <textarea
+                  rows={4}
+                  name="description"
+                  className={inputClass}
+                  placeholder="Briefly describe what happened..."
+                />
               </Field>
 
               <label className="flex items-start gap-3 font-mono text-xs leading-relaxed text-zinc-400">
-                <input type="checkbox" required className="mt-1" />
+                <input type="checkbox" name="consent" required className="mt-1" />
                 <span>
                   I understand overturned_ does not provide medical advice, legal advice, prescribing, or guarantee insurance approval.
                 </span>
@@ -101,10 +177,17 @@ export function Intake() {
 
               <button
                 type="submit"
+                disabled={isSubmitting}
                 className="inline-flex items-center justify-center rounded-full bg-strike px-10 py-5 font-heavy text-base uppercase tracking-tight text-forge-950 transition-all hover:bg-white hover:shadow-[var(--shadow-strike)]"
               >
-                Continue to Review
+                {isSubmitting ? "Sending..." : "Continue to Review"}
               </button>
+
+              {submitError ? (
+                <p className="font-mono text-xs leading-relaxed text-strike">
+                  {submitError}
+                </p>
+              ) : null}
             </>
           )}
         </form>
